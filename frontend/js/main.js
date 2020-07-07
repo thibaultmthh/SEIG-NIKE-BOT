@@ -7,6 +7,8 @@ Tasks_div = document.getElementById("Tasks_div")
 profils_div = document.getElementById("profils_div")
 Accounts_div = document.getElementById("Accounts_div")
 
+
+
 actuel_ligne = Tasks
 actuel_main = Tasks_div
 
@@ -38,19 +40,32 @@ Accounts.addEventListener("click", function() {
 
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-
+var modal_chaussure = document.getElementById("chaussure_add");
+var userSelection = document.getElementsByClassName('el_chaussure');
 
 btn.addEventListener("click", function() {
   modal.style.display = "block";
-  console.log("ok");
 })
 
 
+
+
+for(let i = 0; i < userSelection.length; i++) {
+  userSelection[i].addEventListener("click", function() {
+    console.log("Clicked index: " + userSelection[i]);
+    modal_chaussure.style.display = "block";
+  })
+}
+
+
 window.onclick = function(event) {
+  console.log("oui");
+  if (event.target == modal_chaussure) {
+    console.log(event.target);
+    modal_chaussure.style.display = "none";
+  }
   if (event.target == modal) {
     console.log(event.target);
     modal.style.display = "none";
-    console.log("putain !!!!");
   }
 }
