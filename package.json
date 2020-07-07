@@ -1,0 +1,14 @@
+{
+  "name": "Nike-bot-beta",
+  "version": "1.0.0",
+  "main": "backend/index.js",
+  "author": "Thibault Mathian",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^9.1.0",
+    "electron-store": "^5.2.0"
+  }
+}

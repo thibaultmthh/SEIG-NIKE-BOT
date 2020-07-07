@@ -1,0 +1,393 @@
+body, html {
+  height: 750px;
+  width: 1250px;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1935;
+  border-radius: 50px;
+  height: 9px;
+}
+
+p {
+  overflow: hidden;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.hg10 {
+  height: 10%;
+}
+
+.h-10 {
+  height: 10%;
+}
+
+.h-60 {
+  height: 55%;
+}
+
+.h-90 {
+  height: 90%;
+}
+
+.red {
+  color: #CB0731 !important;
+}
+
+.blanc {
+  color: white !important;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.vert {
+  color: #0b631a;
+}
+
+.centrer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* navigateur*/
+.navigateur {
+  height: 6%;
+  display: flex;
+  background-color: #1a1935;
+}
+
+.logo {
+  width: 7%;
+  display: flex;
+}
+
+.choix_nav {
+  width: 78%;
+  display: flex;
+}
+
+.choix_nav div {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.choix_nav div:hover {
+  background-color: #25197b;
+  cursor: pointer;
+}
+
+.choix_nav p {
+  margin: 0;
+  margin-bottom: 5px;
+  color: gray;
+  font-family: Noto Sans;
+}
+
+.ligne_bas {
+  border-bottom: 2px solid #4126ff;
+  color: white;
+}
+
+.ligne_bas p {
+  color: white;
+}
+
+.choix_nav a {
+  text-decoration: none;
+}
+
+.croixs {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.centrer_croixs {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.centrer_croixs a {
+  width: 13%;
+  margin-right: 20px
+}
+
+.centrer_croixs a:hover {
+  opacity: 50%;
+}
+
+/*Main*/
+.main {
+  background-color: #14151d;
+  height: 94%;
+  display: none
+}
+
+.menu {
+  width: 120px;
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: none;
+}
+
+.menu-options {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.menu-option {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 40px 10px 20px;
+  cursor: pointer;
+}
+
+.menu-option:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.nom_onglet {
+  height: 10%;
+  color: #e4e4e4;
+  font-size: 2em;
+}
+
+/*Accounts*/
+.accounts_container {
+  height: 82%;
+  overflow: hidden;
+}
+
+.accounts_bandeau {
+  height: 8%;
+  background-color: #1a1935;
+}
+
+.presentation {
+  padding-left: 30px;
+  color: white;
+  font-size: 1.1em;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.name_div {
+  width: 200px;
+  padding-right: 15px;
+}
+
+.proxy_div {
+  width: 250px;
+  padding-right: 15px;
+}
+
+.shipping_div {
+  width: 400px;
+  padding-right: 15px;
+}
+
+.account_element {
+  background-color: #1a1935;
+  height: 45px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 14px;
+  width: 99%;
+  color: #e4e4e4;
+}
+
+.centrer_element p {
+  margin: 0;
+}
+
+.display-flex {
+  display: flex;
+  width: auto;
+}
+
+.all_account_container {
+  overflow: auto;
+  height: 90%;
+}
+
+.btn_add_account {
+  background-color: #4126ff;
+  color: white;
+  display: inline-block;
+  font-weight: 400;
+  border: 0;
+}
+
+.btn_add_account:hover {
+  background-color: #44444f;
+}
+
+.centrer_bouton {
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  padding-top: 100px;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 2;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  height: 80%;
+  position: relative;
+  border-radius: 11px;
+  background-color: #1a1935;
+  margin: auto;
+  padding: 0;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.3s;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -50px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*add account*/
+.haut_ajout_compte {
+  padding-top: 5px;
+  height: 10%;
+  border-bottom: 2px solid #4126ff;
+}
+
+.haut_ajout_compte p {
+  text-align: center;
+  font-size: 1.8em;
+  color: white;
+}
+
+.info_ajout_compte {
+  height: 80%;
+}
+
+.valider_ajout_account {
+  height: 10%;
+}
+
+/*Page debut*/
+.chaussure_container {
+  height: 82%;
+  overflow: auto;
+}
+
+.ligne_chaussures {
+  display: flex;
+  height: 45%;
+  margin-bottom: 30px;
+}
+
+.el_chaussure {
+  height: 100%;
+  width: 31.3%;
+  margin-right: 2%;
+  background-color: #1a1935;
+  color: white;
+  border-left: 5px solid #4126ff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.haut_el_chaussure {
+  display: flex;
+}
+
+.nom_chaussure {
+  font-size:17px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.el_chaussure img {
+  height: 100%;
+  margin-right: 20px;
+  border-radius: 8px;
+  opacity: 0.7;
+}
+
+/*4126ff*/
+/*14151d*/
