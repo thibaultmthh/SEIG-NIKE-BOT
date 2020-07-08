@@ -3,13 +3,36 @@ const {
   get_bearer_token
 } = require("./bearer_get.js")
 
-const {set_address, set_payment_method} = require("./set_info.js")
 /*
 const user_ds = new Users_DS()
 const payment_methods_DS = new PaymentMethods_DS()
 const address_ds = new Address_DS()
 */
 
+user_ds = new Users_DS()
+payment_methods_ds = new PaymentMethods_DS()
+address_ds = new Address_DS()
+
+
+
+
+
+var proxy = {
+  domain: "lunar.astroproxies.com",
+  port: "7777",
+  username: "customer-astro_4198358-cc-fr-sessid-hXaiLFh3ujBH",
+  password: "bdc984c262"
+}
+
+var profile = {
+  "username": "bastiTricky@gmx.de",
+  'password': "Schuhe123#",
+  "proxy": proxy,
+
+}
+
+
+/*
 
 
 var address = {
@@ -26,6 +49,8 @@ var address = {
   "email": "thibault.mathian@free.fr"
 }
 
+
+
 var card_info = {
   "accountNumber": "5355861838818404",
   "cardType": "MASTERCARD",
@@ -33,42 +58,157 @@ var card_info = {
   "expirationYear": "2025",
   "cvNumber": "249"
 }
+"nike_pay_id": "",
+"nike_address_id": "",
+"status": "waiting",
+"error": []
+*/
 
-var proxy = {
-  domain: "lunar.astroproxies.com",
-  port: "7777",
-  username: "customer-astro_4198358-cc-fr-sessid-hXaiLFh3ujBH",
-  password: "bdc984c262"
+console.log(address_ds.add_D(address), " id address");
+console.log(payment_methods_ds.add_D(card_info), " id address");
+
+
+
+
+function set_payment_method(bearer_token, proxy, card_info, address) {
+  let ccinfoid = uuidv4()
+  store_headers = {}
+  store_payload = card_info
+  store_payload.creditCardInfoId = ccinfoid
+  store_url = 'https://paymentcc.nike.com/creditcardsubmit/' + ccinfoid + '/store'
+
+  is_valid_headers = {}
+  is_valid_url = "https://paymentcc.nike.com/creditcardsubmit/" + ccinfoid + "/isValid?mode=1"
+
+  savepayment_headers = {
+    "Authorization": "Bearer " + bearer_token
+  }
+  savepayment_payload = {
+    "type": "CreditCard",
+    "creditCardInfoId": ccinfoid,
+    "isDefault": true,
+    "currency": "USD",
+    "billingAddress": address
+  }
+  savepayment_url = "https://api.nike.com/commerce/storedpayments/consumer/savepayment"
+
+  var proxyUrl = "http://" + proxy.username + ":" + proxy.password + "@" + proxy.domain + ":" + proxy.port;
+  var proxiedRequest = request.defaults({
+    'proxy': proxyUrl
+  });
+  proxiedRequest.post({
+    url: store_url,
+    json: store_payload,
+  }, (err, res, body) => {
+    if (err != null) {
+      console.log("err");
+      return
+    }
+    console.log(res.statusCode, body);
+
+    if (res.statusCode == 201) {
+      proxiedRequest.get({
+        url: is_valid_url,
+
+      }, (err, res, body) => {
+        if (err != null) {
+          console.log("err");
+          return
+        }
+        console.log(res.statusCode, body);
+        if (res.statusCode == 200) {
+          proxiedRequest.post({
+            url: savepayment_url,
+            headers: savepayment_headers,
+            json: savepayment_payload
+
+          }, (err, res, body) => {
+            if (err != null) {
+              console.log("err");
+              return
+            }
+            console.log(res.statusCode, body);
+            if (res.statusCode == 201 && body.status == "success") {
+              console.log("successfully add payment method");
+            }
+          })
+        }
+      })
+    }
+  })
 }
 
-var profile = {
-  "username": "bastiTricky@gmx.de",
-  'password': "Schuhe123#",
-  "proxy": proxy,
-  "payment_method": card_info,
-  "address": address,
-  "nike_pay_id": "",
-  "nike_address_id": "",
-  "nike_user_id":"",
-  "status": "waiting",
-  "error": {"text": ""}
+
+
+
+
+
+
+function set_address(bearer_token, proxy, user_id, address, users_ds) {
+  let headers = {
+    'Authorization': 'Bearer ' + bearer_token,
+    'x-nike-ux-id':' HlHa2Cje3ctlaOqnxvgZXNaAs7T9nAuH'
+  }
+  let payload = {
+    "code": address.postalCode,
+    "country": address.country,
+    "line1": address.address1,
+    "line2": address.address2,
+    "line3": address.address3,
+    "locality": address.city,
+    "name": {
+      "kana": {
+        "family": "",
+        "given": ""
+      },
+      "primary": {
+        "family": address.lastName,
+        "given": address.firstName
+      }
+    },
+    "phone": {
+      "primary": address.phoneNumber
+    },
+    "preferred": true,
+    "province": address.province,
+    "zone": ""
+  }
+  var url = "https://api.nike.com/identity/user/v1/"+user_id+"/address"
+  var proxyUrl = "http://" + proxy.username + ":" + proxy.password + "@" + proxy.domain + ":" + proxy.port;
+  var proxiedRequest = request.defaults({
+    'proxy': proxyUrl
+  });
+
+  proxiedRequest.post({url:url, headers: headers, json: payload},(err, res, body) => {
+    if (err != null) {
+      console.log("err");
+      return
+    }
+    console.log(res.statusCode, body);} )
+
+
+
+
 }
 
 
-
-async function add_account(profile, address, card_info){
+async function add_account(profile, address_id, card_info_id, users_ds, payment_methods_ds, address_ds){
+  profile.status = "waiting"
+  profile.error = []
+  users_ds.add_D(profile)
   auth_data = await get_bearer_token(profile.username, profile.password, profile.proxy)
   console.log(auth_data.user_id,"is the user id")
   if (auth_data.bearer_token != ""){
-    set_address(auth_data.bearer_token,profile.proxy,auth_data.user_id, address)
-    set_payment_method(auth_data.bearer_token, profile.proxy, card_info, address)
+    set_address(auth_data.bearer_token,profile.proxy,auth_data.user_id, address, users_ds)
+    set_payment_method(auth_data.bearer_token, profile.proxy, card_info, address, users_ds)
+
 
   }
 
 }
 
 
-add_account(profile, address, card_info)
+module.exports.add_account = add_account
 
 
 

@@ -1,5 +1,7 @@
 const Store = require("electron-store")
-const {v4: uuidv4} = require('uuid');
+const {
+  v4: uuidv4
+} = require('uuid');
 
 
 
@@ -108,13 +110,81 @@ class Address extends Store {
 }
 
 
+class Perm_data {
+  constructor() {
+    this.region_info = {
+      "French": {
+        "language": "fr",
+        "marketplace": "FR"
+      },
+      "United_States": {
+        "language": "en",
+        "marketplace": "US"
+      },
+      "New_Zealand": {
+        "language": "en-GB",
+        "marketplace": "NZ"
+      },
+      "Taiwan": {
+        "language": "zh-Hant",
+        "marketplace": "TW"
+      },
+      "China": {
+        "language": "zh-Hans",
+        "marketplace": "CN"
+
+      }
+    }
+  }
+}
+
+/*
+class Tasks extends Store() {
+  constructor() {
+    super();
+    this.data_name = "tasks_datas"
+    this.datas = this.get(this.data_name) || [] // payment_methods
+  }
+  add_D(data_add) {
+    console.log("add address", data_add);
+    this.datas.push(data_add)
+
+    this.set(this.data_name, this.datas)
+  }
+  get_D(id) {
+    for (var index in this.datas) {
+      if (this.datas.hasOwnProperty(index)) {
+        if (this.datas[index].id == id) {
+          return this.datas[index]
+        }
+      }
+    }
+    console.log(id, "task no found");
+    return 0
+  }
+
+}
+*/
+
+
+
+
+
+
+
+
 module.exports.Address_DS = Address
 module.exports.Payment_methods_DS = Payment_methods
 module.exports.Users_DS = Users
-
+module.exports.Perm_data = Perm_data
 
 
 /*
+
+
+
+
+
 
 
 user = {
@@ -125,9 +195,7 @@ proxy
 payment_method_info_id
 address_info_id
 
-nike_pay_id
-nike_address_id
-nike_user_id
+
 status (not checked, errored, valid)
 error ("" or error if errored)
 }
@@ -157,6 +225,20 @@ id = random
   "phoneNumber": "0769933717",
   "email": "thibault.mathian@free.fr"
 }
+
+
+
+task = {
+product id
+skuu id
+region
+timestamp start
+status ( % ?)
+
+}
+
+
+
 
 
 

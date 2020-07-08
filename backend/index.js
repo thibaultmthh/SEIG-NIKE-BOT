@@ -6,11 +6,24 @@ const ipcMain = require('electron').ipcMain;
 
 const {get_upcoming} = require("./get_info.js")
 
+const {Perm_data} = require("./data_management.js")
+const {Users_DS, Payment_methods_DS,Address_DS} = require("./data_management.js")
+
+const {add_account} = require("./add_account.js")
+
+perm_data = new Perm_data()
+users_ds = new Users_DS()
+payment_methods_ds = new Payment_methods_DS()
+address_ds = new Address_DS()
+
+
+
+
 function mainWin() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1250,
-    height: 750,
+    width: 1550,
+    height: 850,
     frame: false,
     movable: true,
     backgroundColor: "#091821",
@@ -28,7 +41,7 @@ function mainWin() {
   // and load the index.html of the app.
   mainWindow.loadFile('./frontend/main.html')
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   return mainWindow
 }
@@ -42,29 +55,66 @@ function mainWin() {
 
 //Acceuil
 
-var region_info = {
-  "French": {
-    "language": "fr",
-    "marketplace": "FR"
-  },
-  "United_States": {
-    "language": "en",
-    "marketplace": "US"
-  },
-  "New_Zealand": {
-    "language": "en-GB",
-    "marketplace": "NZ"
-  },
-  "Taiwan": {
-    "language": "zh-Hant",
-    "marketplace": "TW"
-  },
-  "China": {
-    "language": "zh-Hans",
-    "marketplace": "CN"
 
-  }
+
+console.log(perm_data);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var proxy = {
+  domain: "lunar.astroproxies.com",
+  port: "7777",
+  username: "customer-astro_4198358-cc-fr-sessid-hXaiLFh3ujBH",
+  password: "bdc984c262"
 }
+
+var profile = {
+  "username": "bastiTricky@gmx.de",
+  'password': "Schuhe123#",
+  "proxy": proxy,
+  "payment_method": card_info,
+  "address": address,
+  "nike_pay_id": "",
+  "nike_address_id": "",
+  "nike_user_id":"",
+  "status": "waiting",
+  "error": {"text": ""}
+}
+
+ //d471ca3b-fbed-4c33-9b3e-c7ee2959b4ad address
+ //5ff6f19e-7cac-4b52-ad48-f7b038599b2e card
+
+
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -76,17 +126,12 @@ function main() {
 
 
 
-
-
-
-
-
   ipcMain.on("get_region_list", (event, data) => {
-    mainWindow.webContents.send("region_list", Object.keys(region_info))
+    mainWindow.webContents.send("region_list", Object.keys(perm_data.region_info))
   })
 
   ipcMain.on("get_upcoming", (event, data)=> {
-    get_upcoming(region_info[data], mainWindow)
+    get_upcoming(perm_data.region_info[data], mainWindow)
   })
 
 }
