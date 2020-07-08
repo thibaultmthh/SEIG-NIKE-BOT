@@ -77,7 +77,8 @@
       <div class="nom_onglet pl-5 pt-2">
         <p>Home</p>
       </div>
-      <div class="chaussure_container container-fluid pr-4 pl-4">
+      <div class="chaussure_container container-fluid pr-4 pl-4" id="chaussure_avaliable_list">
+        <!--
         <div class="ligne_chaussures  ">
           <div class="el_chaussure">
             <div class="h-75 p-3 haut_el_chaussure">
@@ -121,11 +122,13 @@
 
           </div>
         </div>
-
+-->
       </div>
       <div class="accounts_bandeau centrer">
         <div class="centrer_bouton">
 
+          <select class="form-control selectRegion" id="selectRegion">
+          </select>
         </div>
       </div>
     </div>
@@ -457,7 +460,10 @@
     </div>
 
   </div>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script>window.$ = window.jQuery = require('jquery');</script>
+  <script type="text/javascript">const ipc = require('electron').ipcRenderer;</script>
+  <script type="text/javascript" src="js/home/main_home.js"></script>
+
 </body>
 
 </html>

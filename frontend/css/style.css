@@ -1,3 +1,10 @@
+*, *::after, *::before {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+  cursor: default;
+}
+
 body, html {
   height: 750px;
   width: 1250px;
@@ -65,6 +72,7 @@ p {
   height: 6%;
   display: flex;
   background-color: #1a1935;
+  -webkit-app-region: drag;
 }
 
 .logo {
@@ -210,7 +218,7 @@ p {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   */
-  border-radius:  8px;
+  border-radius: 8px;
   padding-left: 30px;
   display: flex;
   flex-direction: column;
@@ -243,13 +251,14 @@ p {
   border: 0;
 }
 
-
 .btn_add_account:active {
   background-color: #2c1c9e;
 }
-.btn_add_account:focus  {
+
+.btn_add_account:focus {
   background-color: #2c1c9e !important;
 }
+
 .btn_add_account:hover {
   background-color: #3721d4;
 }
@@ -280,7 +289,8 @@ p {
   background-color: rgba(0, 0, 0, 0.2);
   /* Black w/ opacity */
 }
-.modal-chaussure{
+
+.modal-chaussure {
   padding-top: 250px;
 }
 
@@ -301,7 +311,7 @@ p {
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.modal-content-chaussure{
+.modal-content-chaussure {
   height: 60%;
   margin-top: 300px;
   position: relative;
@@ -369,7 +379,6 @@ p {
   text-align: center;
   font-size: 1.8em;
   color: white;
-
 }
 
 .info_ajout_compte {
@@ -404,14 +413,13 @@ p {
   border-bottom-right-radius: 8px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  box-shadow:5px 5px 20px rgba(65, 38, 255, 0.5);
+  box-shadow: 5px 5px 20px rgba(65, 38, 255, 0.5);
   transition-duration: 0.2s;
   cursor: pointer;
 }
 
 .el_chaussure:hover {
-  box-shadow:5px 5px 20px rgba(10, 253, 255, 0.5);
-
+  box-shadow: 5px 5px 20px rgba(10, 253, 255, 0.5);
 }
 
 .haut_el_chaussure {
@@ -419,7 +427,7 @@ p {
 }
 
 .nom_chaussure {
-  font-size:17px;
+  font-size: 17px;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -432,7 +440,6 @@ p {
 }
 
 .haut_chaussure {
-
   height: 20%;
   border-bottom: 3px solid #4126ff;
 }
@@ -441,11 +448,11 @@ p {
   text-align: center;
   font-size: 1.8em;
   color: white;
-
 }
 
 .info_chaussure {
   height: 60%;
 }
+
 /*4126ff*/
 /*14151d*/
