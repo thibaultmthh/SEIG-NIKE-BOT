@@ -102,7 +102,8 @@ p {
   margin: 0;
   margin-bottom: 5px;
   color: gray;
-  font-family: Noto Sans;
+  font-family: sans-serif;
+  font-size: 1.05em;
 }
 
 .ligne_bas {
@@ -454,5 +455,39 @@ p {
   height: 60%;
 }
 
+/*Input design*/
+.input_nike {
+  border: 1px solid grey;
+  border-radius: 4px;
+  background-color: #9f9f9f;
+  padding-left: 5px;
+  transition-duration: 0.2s;
+}
+
+.input_nike:focus {
+  outline: 0;
+  border-color: #4126ff;
+  border-width: 2px;
+  background-color: #e4e4e4
+}
+
+.ligne_form{
+  display: flex;
+  margin-bottom: 8px;
+  height: 31px;
+}
+
+.normal_sized_form{
+  width: 190px;
+}
+.normal_sized_form input{
+  width: 180px;
+}
+.big_sized_form{
+  width: 400px;
+}
+.big_sized_form input{
+  width: 370px
+}
 /*4126ff*/
 /*14151d*/
