@@ -8,7 +8,6 @@ profils_div = document.getElementById("profils_div")
 Accounts_div = document.getElementById("Accounts_div")
 
 
-
 actuel_ligne = Tasks
 actuel_main = Tasks_div
 

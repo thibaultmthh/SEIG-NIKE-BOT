@@ -1,6 +1,6 @@
 //Remplire le form des region
 ipc.send("get_region_list", "")
-
+console.log("blooo");
 ipc.on("region_list", (event, data) => {data.forEach(item => $("#selectRegion").prepend("<option value='" + item + "'>" + item + "</option>")); ipc.send("get_upcoming", data[0])})
 
 

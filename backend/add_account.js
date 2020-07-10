@@ -1,4 +1,8 @@
-const {Users_DS, Payment_methods_DS,Address_DS} = require("./data_management.js")
+const {
+  Users_DS,
+  Payment_methods_DS,
+  Address_DS
+} = require("./data_management.js")
 const {
   get_bearer_token
 } = require("./bearer_get.js")
@@ -10,7 +14,7 @@ const address_ds = new Address_DS()
 */
 
 user_ds = new Users_DS()
-payment_methods_ds = new PaymentMethods_DS()
+payment_methods_ds = new Payment_methods_DS()
 address_ds = new Address_DS()
 
 
@@ -32,9 +36,9 @@ var profile = {
 }
 
 
+
+
 /*
-
-
 var address = {
   "firstName": "Thibault",
   "lastName": "Mathian",
@@ -58,14 +62,20 @@ var card_info = {
   "expirationYear": "2025",
   "cvNumber": "249"
 }
+
+*/
+
+
+
+/*
 "nike_pay_id": "",
 "nike_address_id": "",
 "status": "waiting",
 "error": []
 */
 
-console.log(address_ds.add_D(address), " id address");
-console.log(payment_methods_ds.add_D(card_info), " id address");
+//console.log(address_ds.add_D(address), " id address");
+//console.log(payment_methods_ds.add_D(card_info), " id pay");
 
 
 
@@ -147,7 +157,7 @@ function set_payment_method(bearer_token, proxy, card_info) {
 function set_address(bearer_token, proxy, user_id, address) {
   let headers = {
     'Authorization': 'Bearer ' + bearer_token,
-    'x-nike-ux-id':' HlHa2Cje3ctlaOqnxvgZXNaAs7T9nAuH'
+    'x-nike-ux-id': ' HlHa2Cje3ctlaOqnxvgZXNaAs7T9nAuH'
   }
   let payload = {
     "code": address.postalCode,
@@ -173,18 +183,24 @@ function set_address(bearer_token, proxy, user_id, address) {
     "province": address.province,
     "zone": ""
   }
-  var url = "https://api.nike.com/identity/user/v1/"+user_id+"/address"
+  var url = "https://api.nike.com/identity/user/v1/" + user_id + "/address"
   var proxyUrl = "http://" + proxy.username + ":" + proxy.password + "@" + proxy.domain + ":" + proxy.port;
   var proxiedRequest = request.defaults({
     'proxy': proxyUrl
   });
 
-  proxiedRequest.post({url:url, headers: headers, json: payload},(err, res, body) => {
+  proxiedRequest.post({
+    url: url,
+    headers: headers,
+    json: payload
+  }, (err, res, body) => {
     if (err != null) {
       console.log("err");
       return
     }
-    console.log(res.statusCode, body);} )
+    console.log(res.statusCode, body);
+    console.log("address Set !");
+  })
 
 
 
@@ -192,14 +208,16 @@ function set_address(bearer_token, proxy, user_id, address) {
 }
 
 
-async function add_account(profile, address_id, card_info_id, users_ds, payment_methods_ds, address_ds){
+async function add_account(profile, users_ds, payment_methods_ds, address_ds) {
+  address = address_ds.get_D(profile.address_id)
+  card_info = payment_methods_ds.get_D(profile.pay_id)
   profile.status = "waiting"
   profile.error = []
   users_ds.add_D(profile)
   auth_data = await get_bearer_token(profile.username, profile.password, profile.proxy)
-  console.log(auth_data.user_id,"is the user id")
-  if (auth_data.bearer_token != ""){
-    set_address(auth_data.bearer_token,profile.proxy,auth_data.user_id, address)
+  console.log(auth_data.user_id, "is the user id")
+  if (auth_data.bearer_token != "") {
+    set_address(auth_data.bearer_token, profile.proxy, auth_data.user_id, address)
     set_payment_method(auth_data.bearer_token, profile.proxy, card_info, address)
 
 

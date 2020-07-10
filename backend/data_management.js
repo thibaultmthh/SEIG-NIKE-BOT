@@ -26,6 +26,22 @@ class Users extends Store {
     console.log(user_email, "no found in user base");
     return 0
   }
+
+  update_D(data){
+    var id = data.id
+    for (var index in this.datas) {
+      if (this.datas.hasOwnProperty(index)) {
+        if (this.datas[index].id == id) {
+          this.datas[index] = data
+        }
+      }
+    }
+    console.log(id, "no found in payment methods base");
+    return 0
+  }
+
+
+
   add_D(user_datas) {
     console.log("add user", user_datas);
     if (this.get_D(user_datas.username) == 0) {
@@ -45,7 +61,7 @@ class Users extends Store {
 
     this.set(this.data_name, this.datas)
   }
-  
+
 
 }
 
@@ -62,6 +78,19 @@ class Payment_methods extends Store {
       if (this.datas.hasOwnProperty(index)) {
         if (this.datas[index].id == id) {
           return this.datas[index]
+        }
+      }
+    }
+    console.log(id, "no found in payment methods base");
+    return 0
+  }
+
+  update_D(data){
+    var id = data.id
+    for (var index in this.datas) {
+      if (this.datas.hasOwnProperty(index)) {
+        if (this.datas[index].id == id) {
+          this.datas[index] = data
         }
       }
     }
@@ -98,6 +127,21 @@ class Address extends Store {
     }
     console.log(id, "no found in payment methods base");
     return 0
+  }
+
+  update_D(data){
+    var id = data.id
+    for (var index in this.datas) {
+      if (this.datas.hasOwnProperty(index)) {
+        if (this.datas[index].id == id) {
+          this.datas[index] = data
+        }
+      }
+    }
+    console.log(id, "no found in payment methods base");
+    return 0
+  }
+
   }
 
   add_D(data_add) {
