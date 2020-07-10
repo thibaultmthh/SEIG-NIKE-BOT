@@ -142,7 +142,7 @@ class Address extends Store {
     return 0
   }
 
-  }
+  
 
   add_D(data_add) {
     data_add.id = uuidv4()

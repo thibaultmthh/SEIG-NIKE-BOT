@@ -87,7 +87,7 @@ var profile = {
   "username": "bastiTricky@gmx.de",
   'password': "Schuhe123#",
   "address_id": "ef3473ba-912e-4efb-819b-acec40640ef9",
-  "pay_id": "42b64897-fa6d-44c6-92f7-c88aec273fa9"
+  "pay_id": "42b64897-fa6d-44c6-92f7-c88aec273fa9",
   "proxy": proxy,
   "status": "waiting",
   "error": {"text": ""}
