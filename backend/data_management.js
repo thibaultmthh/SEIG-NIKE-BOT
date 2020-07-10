@@ -45,6 +45,7 @@ class Users extends Store {
 
     this.set(this.data_name, this.datas)
   }
+  
 
 }
 

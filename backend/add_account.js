@@ -70,7 +70,7 @@ console.log(payment_methods_ds.add_D(card_info), " id address");
 
 
 
-function set_payment_method(bearer_token, proxy, card_info, address) {
+function set_payment_method(bearer_token, proxy, card_info) {
   let ccinfoid = uuidv4()
   store_headers = {}
   store_payload = card_info
@@ -144,7 +144,7 @@ function set_payment_method(bearer_token, proxy, card_info, address) {
 
 
 
-function set_address(bearer_token, proxy, user_id, address, users_ds) {
+function set_address(bearer_token, proxy, user_id, address) {
   let headers = {
     'Authorization': 'Bearer ' + bearer_token,
     'x-nike-ux-id':' HlHa2Cje3ctlaOqnxvgZXNaAs7T9nAuH'
@@ -199,8 +199,8 @@ async function add_account(profile, address_id, card_info_id, users_ds, payment_
   auth_data = await get_bearer_token(profile.username, profile.password, profile.proxy)
   console.log(auth_data.user_id,"is the user id")
   if (auth_data.bearer_token != ""){
-    set_address(auth_data.bearer_token,profile.proxy,auth_data.user_id, address, users_ds)
-    set_payment_method(auth_data.bearer_token, profile.proxy, card_info, address, users_ds)
+    set_address(auth_data.bearer_token,profile.proxy,auth_data.user_id, address)
+    set_payment_method(auth_data.bearer_token, profile.proxy, card_info, address)
 
 
   }
