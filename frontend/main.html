@@ -160,7 +160,6 @@
           <div class="centrer_bouton">
 
             <select class="form-control selectRegion select-nike" id="selectRegion">
-              <option class="oko">oui</option>
             </select>
           </div>
         </div>
@@ -177,10 +176,10 @@
 
       <div class="main" id="profils_div">
         <div class="nom_onglet pl-5 pt-2">
-          <p>Shipping</p>
+          <p>Shipping (c'est moche je changerais chez papou et mamie)</p>
         </div>
         <div class="display-flex accounts_container">
-          <div class="droite  pt-3">
+          <div class="droite pt-3">
             <div class="haut_addresse">
               <p class="titre_shipping">Addresses</p>
               <div class="form_addresse">
@@ -215,6 +214,7 @@
                     </div>
                   </div>
                   <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_addresse">Save changes</button>
+                  <p class="error">error</p>
                 </div>
               </div>
             </div>
@@ -233,33 +233,53 @@
               </div>
             </div>
           </div>
-          <div class="gauche ">
+          <div class="gauche pt-3">
             <div class="haut_addresse">
-              <div class="ligne_form">
-                <div class="big_sized_form">
-                  <input type="text" name="" value="" class="input_nike" placeholder="accountNumber">
-                </div>
-                <div class="big_sized_form">
-                  <input type="text" name="" value="" class="input_nike" placeholder="cardType">
+              <p class="titre_shipping">Payment</p>
+              <div class="form_addresse">
+                <div class="">
+                  <div class="ligne_form">
+                    <div class="big_sized_form">
+                      <input type="text" name="" value="" class="input_nike" placeholder="accountNumber">
+                    </div>
+                  </div>
+                  <div class="ligne_form">
+                    <div class="big_sized_form">
+                      <input type="text" name="" value="" class="input_nike" placeholder="cardType">
+                    </div>
+                  </div>
+                  <div class="ligne_form">
+                    <div class="normal_sized_form">
+                      <input type="text" name="" value="" class="input_nike" placeholder="expirationMonth">
+                    </div>
+                    <div class="normal_sized_form">
+                      <input type="text" name="" value="" class="input_nike" placeholder="expirationYear">
+                    </div>
+                  </div>
+                  <div class="ligne_form">
+                    <div class="normal_sized_form">
+                      <input type="text" name="" value="" class="input_nike" placeholder="cvNumber">
+                    </div>
+                  </div>
+                  <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_addresse">Add payment</button>
+                  <p class="error">error</p>
                 </div>
               </div>
-              <div class="ligne_form">
-                <div class="normal_sized_form">
-                  <input type="text" name="" value="" class="input_nike" placeholder="expirationMonth">
-                </div>
-                <div class="normal_sized_form">
-                  <input type="text" name="" value="" class="input_nike" placeholder="expirationYear">
-                </div>
-              </div>
-              <div class="ligne_form">
-                <div class="normal_sized_form">
-                  <input type="text" name="" value="" class="input_nike" placeholder="cvNumber">
-                </div>
-              </div>
-
             </div>
 
-            cvNumber
+            <div class="bas_addresse p-4">
+              <div class="liste_addresse">
+                <div class="div_addresse centrer w-100">
+                  <div class="div_addresse_millieu">
+                    <p>Numero de carte</p>
+                    <p>Cardetype</p>
+                    <div class="edit">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

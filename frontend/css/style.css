@@ -547,6 +547,7 @@ margin:0;
 .liste_addresse{
   overflow:auto;
   position: relative;
+  padding: 10px;
 }
 .titre_shipping{
   color: white;
@@ -563,6 +564,11 @@ margin:0;
 }
 .edit{
   position: fixed;
+}
+.error{
+  margin-top: 5px;
+  color: red;
+  font-size: 0.8em
 }
 /*4126ff*/
 /*14151d*/
