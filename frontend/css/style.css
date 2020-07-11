@@ -91,11 +91,11 @@ p {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
 }
 
 .choix_nav div:hover {
   background-color: #25197b;
-  cursor: pointer;
 }
 
 .choix_nav p {
@@ -104,6 +104,7 @@ p {
   color: gray;
   font-family: sans-serif;
   font-size: 1.05em;
+  cursor: pointer;
 }
 
 .ligne_bas {
@@ -462,6 +463,7 @@ p {
   background-color: #9f9f9f;
   padding-left: 5px;
   transition-duration: 0.2s;
+  height: 30px;
 }
 
 .input_nike:focus {
@@ -471,23 +473,92 @@ p {
   background-color: #e4e4e4
 }
 
-.ligne_form{
+.ligne_form {
   display: flex;
   margin-bottom: 8px;
   height: 31px;
 }
 
-.normal_sized_form{
+.normal_sized_form {
   width: 190px;
 }
-.normal_sized_form input{
+
+.normal_sized_form input {
   width: 180px;
 }
-.big_sized_form{
+
+.big_sized_form {
   width: 400px;
 }
-.big_sized_form input{
+
+.big_sized_form input {
   width: 370px
+}
+
+.select-nike {
+  height: 25px;
+}
+
+.select-nike:focus {
+  outline: 0;
+  box-shadow: none;
+  border: 1px solid #ced4da;
+}
+
+.ecriture_add {
+  font-size: 1em;
+}
+
+.add_div_droit {
+  width: 90px;
+}
+
+.droite {
+  width: 50%;
+}
+
+.gauche {
+  width: 50%;
+}
+
+.haut_addresse {
+  height: 50%;
+}
+
+.div_addresse {
+  border-radius: 5px;
+  background-color: #1a1935;
+  color: white;
+  height: 40px;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.3s;
+}
+
+.div_addresse_millieu {
+  display: flex;
+  justify-content: space-around;
+}
+.div_addresse_millieu p{
+margin:0;
+}
+.liste_addresse{
+  overflow:auto;
+}
+.titre_shipping{
+  color: white;
+  margin-left: 70px;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+.form_addresse{
+  display: flex;
+  justify-content: center;
+}
+#save_addresse{
+  width: 370px;
 }
 /*4126ff*/
 /*14151d*/
+/*1a1935*/
