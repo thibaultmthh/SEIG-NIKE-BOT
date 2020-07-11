@@ -534,6 +534,7 @@ p {
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.3s;
+  overflow: hidden;
 }
 
 .div_addresse_millieu {
@@ -545,6 +546,7 @@ margin:0;
 }
 .liste_addresse{
   overflow:auto;
+  position: relative;
 }
 .titre_shipping{
   color: white;
@@ -558,6 +560,9 @@ margin:0;
 }
 #save_addresse{
   width: 370px;
+}
+.edit{
+  position: fixed;
 }
 /*4126ff*/
 /*14151d*/
