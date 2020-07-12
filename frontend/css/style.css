@@ -9,6 +9,7 @@ body, html {
   height: 750px;
   width: 1250px;
   overflow: auto;
+  position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -44,7 +45,12 @@ p {
 .h-90 {
   height: 90%;
 }
-
+.w-40{
+  width: 40%
+}
+.w-45{
+  width: 45%
+}
 .red {
   color: #CB0731 !important;
 }
@@ -65,6 +71,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 /* navigateur*/
@@ -73,6 +80,7 @@ p {
   display: flex;
   background-color: #1a1935;
   -webkit-app-region: drag;
+  position: relative;
 }
 
 .logo {
@@ -145,7 +153,8 @@ p {
 .main {
   background-color: #14151d;
   height: 94%;
-  display: none
+  display: none;
+  position: relative;
 }
 
 .menu {
@@ -271,7 +280,8 @@ p {
 }
 
 .modal {
-  padding-top: 100px;
+
+  padding-top: 200px;
   display: none;
   /* Hidden by default */
   position: fixed;
@@ -298,13 +308,13 @@ p {
 
 /* Modal Content */
 .modal-content-account {
-  height: 80%;
+  height: 55%;
   position: relative;
   border-radius: 11px;
   background-color: #1a1935;
   margin: auto;
   padding: 0;
-  width: 50%;
+  width: 45%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -372,8 +382,8 @@ p {
 
 /*add account*/
 .haut_ajout_compte {
-  padding-top: 8px;
-  height: 12%;
+  padding-top: 3px;
+  height: 20%;
   border-bottom: 3px solid #4126ff;
 }
 
@@ -384,11 +394,11 @@ p {
 }
 
 .info_ajout_compte {
-  height: 78%;
+  height: 63%;
 }
 
 .valider_ajout_account {
-  height: 10%;
+  height: 17%;
 }
 
 /*Page debut*/
@@ -420,8 +430,18 @@ p {
   cursor: pointer;
 }
 
+.div_addresse:hover .edit {
+  width: 45px;
+}
+
 .el_chaussure:hover {
   box-shadow: 5px 5px 20px rgba(10, 253, 255, 0.5);
+}
+
+.el_chaussure button {}
+
+.el_chaussure:hover button {
+  height: auto;
 }
 
 .haut_el_chaussure {
@@ -535,40 +555,101 @@ p {
   animation-name: animatetop;
   animation-duration: 0.3s;
   overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .div_addresse_millieu {
   display: flex;
   justify-content: space-around;
 }
-.div_addresse_millieu p{
-margin:0;
+
+.div_addresse_millieu p {
+  margin: 0;
 }
-.liste_addresse{
-  overflow:auto;
+
+.liste_addresse {
+  overflow: auto;
   position: relative;
   padding: 10px;
 }
-.titre_shipping{
+
+.titre_shipping {
   color: white;
   margin-left: 70px;
   font-size: 1.5em;
   margin-bottom: 20px;
 }
-.form_addresse{
+
+.form_addresse {
   display: flex;
   justify-content: center;
 }
-#save_addresse{
+
+#save_addresse {
   width: 370px;
 }
-.edit{
-  position: fixed;
+
+.edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  background-color:#4126ff ;
+  transition-duration: 0.5s;
 }
-.error{
+.edit:hover .edit-logo{
+  opacity: 0.7;
+  transition-duration: 0s;
+  cursor: pointer;
+}
+.edit:hover{
+  cursor: pointer;
+}
+.error {
   margin-top: 5px;
   color: red;
   font-size: 0.8em
+}
+
+.select_nike {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+:focus {
+  outline: 0;
+}
+
+.start_task {
+  display: none;
+}
+
+.el_chaussure:hover button {
+  display: block;
+  animation-name: animatetop;
+  animation-duration: 0.3s;
+}
+.edit-logo{
+  height: 20px;
+  margin:10px;
+  margin-left: 12px;
+
+}
+.info_ajout_compte_password{
+  margin-bottom: 16px;
+}
+
+.info_ajout_compte_password p{
+  margin:0;
+  overflow: hidden;
+  padding-top: 2px;
+  margin-right: 20px;
+}
+.add_select{
+  width: 373px;
 }
 /*4126ff*/
 /*14151d*/

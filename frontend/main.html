@@ -16,20 +16,36 @@
         <div class="haut_ajout_compte">
           <p>Add a new nike account</p>
         </div>
-        <div class="info_ajout_compte p-4 pt-5" style="color:white">
+        <div class="info_ajout_compte p-4 " style="color:white">
+          <div class="display-flex info_ajout_compte_password">
+            <div class="display-flex w-50">
+              <p>Username:</p>
+              <input type="text" name="" value="" class="input_nike w-45" placeholder="Username">
+            </div>
+            <div class="display-flex w-50">
+              <p>Password:</p>
+              <input type="text" name="" value="" class="input_nike w-45" placeholder="Password">
+            </div>
+          </div>
 
           <div class="display-flex mb-3">
             <div class="centrer pb-1 add_div_droit">
-              <p class="m-0 ecriture_add mr-3">Shipping: </p>
+              <p class="m-0 ecriture_add mr-3">Profil : </p>
             </div>
-
+            <select class="select_nike add_select" name="">
+              <option value="" disabled selected>Select your option</option>
+            </select>
           </div>
           <div class="display-flex">
             <div class="centrer pb-1 add_div_droit">
-              <p class="m-0 ecriture_add mr-3">Profil: </p>
+              <p class="m-0 ecriture_add mr-3">Shipping: </p>
             </div>
-
+            <select class="select_nike add_select" name="">
+              <option value="" disabled selected>Select your option</option>
+            </select>
           </div>
+          <p class="error">error</p>
+
         </div>
         <div class="valider_ajout_account">
           <div class="centrer_bouton">
@@ -110,28 +126,27 @@
             <p>Home</p>
           </div>
           <div class="chaussure_container container-fluid pr-4 pl-4" id="chaussure_avaliable_list">
-            <!--
-        <div class='ligne_chaussures  '>
-          <div class='el_chaussure'>
-            <div class='h-75 p-3 haut_el_chaussure'>
-              <img src='https://secure-images.nike.com/is/image/DotCom/555088_126' alt='photo'>
-              <div class=''>
-                <p class='nom_chaussure'>Air Jordan 1 Retro High OG</p>
-                <p class='prix_chaussure'> <span class='mr-2'><b>Price:</b></span>170$</p>
+
+            <div class='ligne_chaussures'>
+              <div class='el_chaussure'>
+                <div class='h-75 p-3 haut_el_chaussure'>
+                  <img src='https://secure-images.nike.com/is/image/DotCom/555088_126' alt='photo'>
+                  <div class=''>
+                    <p class='nom_chaussure'>Air Jordan 1 Retro High OG</p>
+                    <p class='prix_chaussure'> <span class='mr-2'><b>Price:</b></span>170$</p>
+                    <div class="display-flex">
+                      <p class="mr-2"> <b>Size:</b> </p>
+                      <select class="select_nike" name="">
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class='p-3 centrer'>
+                  <button type="button" name="button " class="btn btn-primary btn_add_account start_task">Start task</button>
+                </div>
               </div>
-
             </div>
-            <div class=''>
-
-            </div>
-          </div>
-          <div class="el_chaussure">
-
-          </div>
-          <div class="el_chaussure">
-
-          </div>
-        </div>
+            <!--
         <div class="ligne_chaussures  ">
           <div class="el_chaussure">
 
@@ -176,7 +191,7 @@
 
         <div class="main" id="profils_div">
           <div class="nom_onglet pl-5 pt-2">
-            <p>Shipping (c'est moche je changerais chez papou et mamie)</p>
+            <p>Shipping</p>
           </div>
           <div class="display-flex accounts_container">
             <div class="droite pt-3">
@@ -185,42 +200,35 @@
                 <div class="form_addresse">
                   <div class="">
                     <div class="ligne_form">
-                      <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="Frist name" id="input_Fname">
-                      </div>
-                      <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="Last name" id="input_Lname">
-                      </div>
-
-                    </div>
-                    <div class="ligne_form">
                       <div class="big_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="Address" id="input_address1">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Address">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="State" id="input_state">
+                        <input type="text" name="" value="" class="input_nike" placeholder="State">
                       </div>
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="City" id="input_city">
+                        <input type="text" name="" value="" class="input_nike" placeholder="City">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="Postal code" id="input_postal_code">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Postal code">
                       </div>
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="(pays fair une liste)" id="input_country">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Country">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="Phone number" id="input_phone_number">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Phone number">
                       </div>
-
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Email">
+                      </div>
                     </div>
-                    <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_address">Save changes</button>
+                    <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_addresse">Save changes</button>
                     <p class="error">error</p>
                   </div>
                 </div>
@@ -228,11 +236,31 @@
               <div class="bas_addresse p-4">
                 <div class="liste_addresse">
                   <div class="div_addresse centrer w-100">
-                    <div class="div_addresse_millieu" id="liste_addresse">
+                    <div class="div_addresse_millieu">
                       <p>Nom de l'addresse</p>
                       <p>Ville</p>
-                      <div class="edit">
+                      <div class="edit" style="">
+                        <img src="pictures/th.png" alt="" class="edit-logo">
+                      </div>
+                    </div>
 
+                  </div>
+                  <div class="div_addresse centrer w-100">
+                    <div class="div_addresse_millieu">
+                      <p>Nom de l'addresse</p>
+                      <p>Ville</p>
+                      <div class="edit" style="">
+                        <img src="pictures/th.png" alt="" class="edit-logo">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="div_addresse centrer w-100">
+                    <div class="div_addresse_millieu">
+                      <p>Nom de l'addresse</p>
+                      <p>Ville</p>
+                      <div class="edit" style="">
+                        <img src="pictures/th.png" alt="" class="edit-logo">
                       </div>
                     </div>
 
@@ -247,28 +275,28 @@
                   <div class="">
                     <div class="ligne_form">
                       <div class="big_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="accountNumber" id="accountNumber">
+                        <input type="text" name="" value="" class="input_nike" placeholder="accountNumber">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="big_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="cardType" id="cardType">
+                        <input type="text" name="" value="" class="input_nike" placeholder="cardType">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="expirationMonth" id="expirationMonth">
+                        <input type="text" name="" value="" class="input_nike" placeholder="expirationMonth">
                       </div>
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="expirationYear" id="expirationYear">
+                        <input type="text" name="" value="" class="input_nike" placeholder="expirationYear">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="cvNumber" id="cvNumber">
+                        <input type="text" name="" value="" class="input_nike" placeholder="cvNumber">
                       </div>
                     </div>
-                    <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_payment">Add payment</button>
+                    <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_addresse">Add payment</button>
                     <p class="error">error</p>
                   </div>
                 </div>
@@ -280,7 +308,8 @@
                     <div class="div_addresse_millieu">
                       <p>Numero de carte</p>
                       <p>Cardetype</p>
-                      <div class="edit">
+                      <div class="edit" style="">
+                        <img src="pictures/th.png" alt="" class="edit-logo">
                       </div>
                     </div>
 
@@ -599,7 +628,6 @@
 
         </script>
         <script type="text/javascript" src="js/home/main_home.js"></script>
-        <script type="text/javascript" src="js/billing/add_new_address.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/avoir.js">
 
