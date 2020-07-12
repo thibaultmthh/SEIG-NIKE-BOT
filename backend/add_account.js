@@ -32,6 +32,13 @@ var profile = {
   "username": "bastiTricky@gmx.de",
   'password': "Schuhe123#",
   "proxy": proxy,
+  "id_info":{
+    "bearer_token": "",
+    "refresh_token": "",
+    "client_id": "",
+    "expire": 0,
+    "user_id": ""
+  }
 
 }
 
@@ -50,7 +57,7 @@ var address = {
   "postalCode": "38190",
   "country": "FR",
   "phoneNumber": "0769933717",
-  "email": "thibault.mathian@free.fr"
+  //"email": "thibault.mathian@free.fr"
 }
 
 

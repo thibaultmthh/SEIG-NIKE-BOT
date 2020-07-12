@@ -22,16 +22,17 @@ async function get_bearer_token(username, password, proxy) {
     args: ['--enable-features=NetworkService', "--proxy-server=http://" + proxy.domain + ":" + proxy.port],
     ignoreHTTPSErrors: true,
     slowMo:10,
+    headless: false
 
   });
   const page = await browser.newPage();
-  //await page.setRequestInterception(true);
+  await page.setRequestInterception(true);
 
   await page.authenticate({
     username: proxy.username,
     password: proxy.password,
   });
-  var auth_data = {"bearer_token": "", "user_id": ""}
+  var auth_data = {"bearer_token": "","refresh_token": "", "client_id": "", "user_id": "", "expires":0}
 
   const regex = /nike.com\/login/
 
@@ -56,6 +57,29 @@ async function get_bearer_token(username, password, proxy) {
       }
     }
   });
+
+  page.on("request", request => {
+    if (regex.test(request.url())){
+      try{
+        let data = JSON.parse(request.postData())
+        console.log(data);
+      }
+      catch (err) {
+        console.log("oups");
+      }
+
+    }
+
+    request.continue()
+  })
+
+
+
+
+
+
+
+
   var ok = false
   while (!ok) {
     try {

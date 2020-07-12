@@ -145,8 +145,8 @@ function main() {
 
 
   //user managment
-  ipcMain.on("set_user", (event, data)=> {add_account(data, user_ds, )})
-  ipcMain.on("get_all_users", ()=>{mainWindow.webContents.send("all_pay", payment_methods_ds.datas)})
+  ipcMain.on("set_user", (event, data)=> {add_account(data, user_ds,payment_methods_ds, address_ds )})
+  //ipcMain.on("get_all_users", ()=>{mainWindow.webContents.send("all_pay", payment_methods_ds.datas)})
 
 
 
