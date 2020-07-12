@@ -40,13 +40,13 @@ Accounts.addEventListener("click", function() {
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var modal_chaussure = document.getElementById("chaussure_add");
-var userSelection = document.getElementsByClassName('el_chaussure');
+var userSelection = document.getElementsByClassName('start_task');
 
 btn.addEventListener("click", function() {
   modal.style.display = "block";
 })
 
-
+console.log(userSelection.length);
 
 
 for(let i = 0; i < userSelection.length; i++) {

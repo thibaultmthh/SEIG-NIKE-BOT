@@ -16,19 +16,32 @@
       <div class="haut_ajout_compte">
         <p>Add a new nike account</p>
       </div>
-      <div class="info_ajout_compte p-4 pt-5" style="color:white">
+      <div class="info_ajout_compte p-4 " style="color:white">
+        <div class="display-flex info_ajout_compte_password">
+          <div class="display-flex w-50">
+            <p>Username:</p>
+            <input type="text" name="" value="" class="input_nike w-45" placeholder="Username">
+          </div>
+          <div class="display-flex w-50">
+            <p>Password:</p>
+            <input type="text" name="" value="" class="input_nike w-45" placeholder="Password">
+          </div>
+        </div>
 
         <div class="display-flex mb-3">
           <div class="centrer pb-1 add_div_droit">
             <p class="m-0 ecriture_add mr-3">Shipping: </p>
           </div>
-
+          <select class="select_nike add_select" name="">
+            </select>
         </div>
         <div class="display-flex">
           <div class="centrer pb-1 add_div_droit">
             <p class="m-0 ecriture_add mr-3">Profil: </p>
           </div>
-
+          <select class="select_nike add_select" name="">
+            <option value="" disabled selected>Select your option</option>
+          </select>
         </div>
       </div>
       <div class="valider_ajout_account">
@@ -110,28 +123,27 @@
           <p>Home</p>
         </div>
         <div class="chaussure_container container-fluid pr-4 pl-4" id="chaussure_avaliable_list">
-          <!--
-        <div class='ligne_chaussures  '>
-          <div class='el_chaussure'>
-            <div class='h-75 p-3 haut_el_chaussure'>
-              <img src='https://secure-images.nike.com/is/image/DotCom/555088_126' alt='photo'>
-              <div class=''>
-                <p class='nom_chaussure'>Air Jordan 1 Retro High OG</p>
-                <p class='prix_chaussure'> <span class='mr-2'><b>Price:</b></span>170$</p>
+
+          <div class='ligne_chaussures'>
+            <div class='el_chaussure'>
+              <div class='h-75 p-3 haut_el_chaussure'>
+                <img src='https://secure-images.nike.com/is/image/DotCom/555088_126' alt='photo'>
+                <div class=''>
+                  <p class='nom_chaussure'>Air Jordan 1 Retro High OG</p>
+                  <p class='prix_chaussure'> <span class='mr-2'><b>Price:</b></span>170$</p>
+                  <div class="display-flex">
+                    <p class="mr-2"> <b>Size:</b> </p>
+                    <select class="select_nike" name="">
+                    </select>
+                  </div>
+                </div>
               </div>
-
+              <div class='p-3 centrer'>
+                <button type="button" name="button " class="btn btn-primary btn_add_account start_task">Start task</button>
+              </div>
             </div>
-            <div class=''>
-
-            </div>
           </div>
-          <div class="el_chaussure">
-
-          </div>
-          <div class="el_chaussure">
-
-          </div>
-        </div>
+          <!--
         <div class="ligne_chaussures  ">
           <div class="el_chaussure">
 
@@ -176,7 +188,7 @@
 
       <div class="main" id="profils_div">
         <div class="nom_onglet pl-5 pt-2">
-          <p>Shipping (c'est moche je changerais chez papou et mamie)</p>
+          <p>Shipping</p>
         </div>
         <div class="display-flex accounts_container">
           <div class="droite pt-3">
@@ -224,8 +236,28 @@
                   <div class="div_addresse_millieu">
                     <p>Nom de l'addresse</p>
                     <p>Ville</p>
-                    <div class="edit">
+                    <div class="edit" style="">
+                      <img src="pictures/th.png" alt="" class="edit-logo">
+                    </div>
+                  </div>
 
+                </div>
+                <div class="div_addresse centrer w-100">
+                  <div class="div_addresse_millieu">
+                    <p>Nom de l'addresse</p>
+                    <p>Ville</p>
+                    <div class="edit" style="">
+                      <img src="pictures/th.png" alt="" class="edit-logo">
+                    </div>
+                  </div>
+
+                </div>
+                <div class="div_addresse centrer w-100">
+                  <div class="div_addresse_millieu">
+                    <p>Nom de l'addresse</p>
+                    <p>Ville</p>
+                    <div class="edit" style="">
+                      <img src="pictures/th.png" alt="" class="edit-logo">
                     </div>
                   </div>
 
@@ -273,7 +305,8 @@
                   <div class="div_addresse_millieu">
                     <p>Numero de carte</p>
                     <p>Cardetype</p>
-                    <div class="edit">
+                    <div class="edit" style="">
+                      <img src="pictures/th.png" alt="" class="edit-logo">
                     </div>
                   </div>
 
