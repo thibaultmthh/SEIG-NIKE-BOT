@@ -1,7 +1,7 @@
 {
   "name": "Nike-bot-beta",
   "version": "1.0.0",
-  "main": "backend/test.js",
+  "main": "backend/index.js",
   "author": "Thibault Mathian",
   "license": "MIT",
   "scripts": {

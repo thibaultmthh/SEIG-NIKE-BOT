@@ -137,6 +137,7 @@
                     <div class="display-flex">
                       <p class="mr-2"> <b>Size:</b> </p>
                       <select class="select_nike" name="">
+                        <option value="test">test</option>
                       </select>
                     </div>
                   </div>
@@ -146,30 +147,7 @@
                 </div>
               </div>
             </div>
-            <!--
-        <div class="ligne_chaussures  ">
-          <div class="el_chaussure">
 
-          </div>
-          <div class="el_chaussure">
-
-          </div>
-          <div class="el_chaussure">
-
-          </div>
-        </div>
-        <div class="ligne_chaussures  ">
-          <div class="el_chaussure">
-
-          </div>
-          <div class="el_chaussure">
-
-          </div>
-          <div class="el_chaussure">
-
-          </div>
-        </div>
--->
           </div>
           <div class="accounts_bandeau centrer">
             <div class="centrer_bouton">
@@ -189,6 +167,8 @@
 
 
 
+        <!-- Billing div -->
+
         <div class="main" id="profils_div">
           <div class="nom_onglet pl-5 pt-2">
             <p>Shipping</p>
@@ -200,41 +180,58 @@
                 <div class="form_addresse">
                   <div class="">
                     <div class="ligne_form">
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Address_name" id="address_name">
+                      </div>
+                    </div>
+                    <div class="ligne_form">
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="First Name" id="input_Fname">
+                      </div>
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Last name" id="input_Lname">
+
+
+                      </div>
+                    </div>
+                    <div class="ligne_form">
                       <div class="big_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="Address">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Address" id="input_address1">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="State">
+                        <input type="text" name="" value="" class="input_nike" placeholder="State" id="input_state">
                       </div>
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="City">
+                        <input type="text" name="" value="" class="input_nike" placeholder="City" id="input_city">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="Postal code">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Postal code" id="input_postal_code">
                       </div>
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="Country">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Country" id="input_country">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="Phone number">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Phone number" id="input_phone_number">
                       </div>
+                      <!--
                       <div class="normal_sized_form">
                         <input type="text" name="" value="" class="input_nike" placeholder="Email">
                       </div>
+                    -->
                     </div>
                     <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_addresse">Save changes</button>
                     <p class="error">error</p>
                   </div>
                 </div>
               </div>
-              <div class="bas_addresse p-4">
-                <div class="liste_addresse">
+              <div class="bas_addresse p-5">
+                <div class="liste_addresse" id="liste_addresse">
                   <div class="div_addresse centrer w-100">
                     <div class="div_addresse_millieu">
                       <p>Nom de l'addresse</p>
@@ -275,28 +272,28 @@
                   <div class="">
                     <div class="ligne_form">
                       <div class="big_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="accountNumber">
+                        <input type="text" name="" value="" class="input_nike" placeholder="accountNumber" id="accountNumber">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="big_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="cardType">
+                        <input type="text" name="" value="" class="input_nike" placeholder="cardType" id="cardType">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="expirationMonth">
+                        <input type="text" name="" value="" class="input_nike" placeholder="expirationMonth" id="expirationMonth">
                       </div>
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="expirationYear">
+                        <input type="text" name="" value="" class="input_nike" placeholder="expirationYear" id="expirationMonth">
                       </div>
                     </div>
                     <div class="ligne_form">
                       <div class="normal_sized_form">
-                        <input type="text" name="" value="" class="input_nike" placeholder="cvNumber">
+                        <input type="text" name="" value="" class="input_nike" placeholder="cvNumber" id="cvNumber">
                       </div>
                     </div>
-                    <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_addresse">Add payment</button>
+                    <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_payment">Add payment</button>
                     <p class="error">error</p>
                   </div>
                 </div>
@@ -424,214 +421,78 @@
               <div class="account_element">
                 <div class="centrer_element">
                   <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    <div cla <!-- <div class="ligne_chaussures  ">
+                      <div class="el_chaussure">
 
+                      </div>
+                      <div class="el_chaussure">
 
+                      </div>
+                      <div class="el_chaussure">
 
+                      </div>
+                    </div>
+                    <div class="ligne_chaussures  ">
+                      <div class="el_chaussure">
 
+                      </div>
+                      <div class="el_chaussure">
 
-            </div>
-          </div>
+                      </div>
+                      <div class="el_chaussure">
 
-
-          <div class="accounts_bandeau centrer">
-            <div class="centrer_bouton">
-              <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBtn">Add account</button>
+                      </div>
+                    </div>
+                    -->ss="name_div">
+                    <p>Thibault_mth</p>
+                  </div>
+                  <div class="proxy_div">
+                    <p>127.0.0.1</p>
+                  </div>
+                  <div class="shipping_div">
+                    <p>Jsp quoi mettre</p>
+                  </div>
+                  <div class="other_div">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
         </div>
 
 
-        <script>
-          window.$ = window.jQuery = require('jquery');
+        <div class="accounts_bandeau centrer">
+          <div class="centrer_bouton">
+            <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBtn">Add account</button>
+          </div>
 
-        </script>
-        <script type="text/javascript">
-          const ipc = require('electron').ipcRenderer;
+        </div>
+      </div>
 
-        </script>
-        <script type="text/javascript" src="js/home/main_home.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/avoir.js">
 
-        </script>
+      <script>
+        window.$ = window.jQuery = require('jquery');
+
+      </script>
+      <script type="text/javascript">
+        const ipc = require('electron').ipcRenderer;
+
+      </script>
+      <script>
+        window.$ = window.jQuery = require('jquery');
+
+      </script>
+
+      <script type="text/javascript" src="js/home/main_home.js"></script>
+      <script type="text/javascript" src="js/billing/add_new_address.js">
+
+      </script>
+      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" src="js/avoir.js">
+
+      </script>
 
   </body>
 

@@ -4,8 +4,18 @@ ipc.on("all_address", (event, data) => {
   $("#liste_addresse").empty()
   for (let i in data) {
     address = data[i]
+    console.log(address);
+    let div_addresse = "<div class='div_addresse centrer w-100'>"+
+"        <div class='div_addresse_millieu'>"+
+"          <p>"+address.address1+"</p>"+
+"          <p>Ville</p>"+
+"          <div class='edit' style=''>"+
+"            <img src='pictures/th.png' alt='' class='edit-logo'>"+
+"          </div>"+
+"        </div>"+
+"      </div>"
 
-    $("#liste_addresse").append("<p>" + address.address1 + "</p></br>")
+    $("#liste_addresse").append(div_addresse)
   }
 
   console.log(data);
