@@ -40,7 +40,7 @@ Accounts.addEventListener("click", function() {
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var modal_chaussure = document.getElementById("chaussure_add");
-var userSelection = document.getElementsByClassName('start_task');
+var userSelection = document.getElementsByClassName('edit');
 
 btn.addEventListener("click", function() {
   modal.style.display = "block";
