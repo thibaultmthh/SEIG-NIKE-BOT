@@ -1,15 +1,14 @@
 ipc.send("get_all_address", "")
-
+ipc.send("get_all_pay")
 ipc.on("all_address", (event, data) => {
   $("#liste_addresse").empty()
   for (let i in data) {
     address = data[i]
-    console.log(address);
     let div_addresse = "<div class='div_addresse centrer w-100'>"+
 "        <div class='div_addresse_millieu'>"+
 "          <p>"+address.address1+"</p>"+
-"          <p>Ville</p>"+
-"          <div class='edit' style=''>"+
+"          <p>"+address.city+"</p>"+
+"          <div class='edit' style='' id='"+address.id+"'>"+
 "            <img src='pictures/th.png' alt='' class='edit-logo'>"+
 "          </div>"+
 "        </div>"+
@@ -20,6 +19,30 @@ ipc.on("all_address", (event, data) => {
 
   console.log(data);
 })
+
+
+
+ipc.on("all_pay", (event, data) => {
+  $("#liste_card").empty()
+  for (let i in data) {
+    card = data[i]
+    console.log(address);
+    let div_card = "<div class='div_addresse centrer w-100'>"+
+"        <div class='div_addresse_millieu'>"+
+"          <p>"+card.accountNumber+"</p>"+
+"          <p>"+card.cardType+"</p>"+
+"          <div class='edit' style='' id='"+card.id+"'>"+
+"            <img src='pictures/th.png' alt='' class='edit-logo'>"+
+"          </div>"+
+"        </div>"+
+"      </div>"
+
+    $("#liste_card").append(div_card)
+  }
+
+  console.log(data);
+})
+
 
 
 
@@ -53,7 +76,7 @@ $("#save_address").on("click",()=>{
 
 
 
-$("#save_payment").on("click",()=>{
+$("#save_payment").click(()=>{
   console.log("blabala");
   var card_info = {
     "accountNumber": $('#accountNumber').val().trim(),
