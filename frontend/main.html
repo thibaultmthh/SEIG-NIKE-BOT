@@ -16,52 +16,56 @@
         <div class="haut_ajout_compte">
           <p>Add a new nike account</p>
         </div>
-        <div class="info_ajout_compte p-4 " style="color:white">
-          <div class="display-flex info_ajout_compte_password">
-            <div class="display-flex w-50">
-              <p></p>
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy username" id="proxy_username">
-            </div>
-            <div class="display-flex w-50">
-              <p>:</p>
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy password" id="proxy_password">
-            </div>
-            <div class="display-flex w-50">
-              <p>@</p>
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy host" id="proxy_host">
-            </div>
-            <div class="display-flex w-50">
-              <p>:</p>
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy port" id="proxy_port">
-            </div>
-          </div>
+        <div class="info_ajout_compte p-4" style="color:white;">
+
           <div class="display-flex info_ajout_compte_password">
             <div class="display-flex w-50">
               <p>Username:</p>
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="Username" id="user_username">
+              <input type="text" name="" value="" class="input_nike w-45" placeholder="Username">
             </div>
             <div class="display-flex w-50">
               <p>Password:</p>
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="Password" id="user_password">
+              <input type="text" name="" value="" class="input_nike w-45" placeholder="Password">
+            </div>
+          </div>
+          <div class="info_ajout_compte p-4 " style="color:white">
+            <div class="display-flex info_ajout_compte_password">
+              <div class="display-flex w-50">
+                <p></p>
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy username" id="proxy_username">
+              </div>
+              <div class="display-flex w-50">
+                <p>:</p>
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy password" id="proxy_password">
+              </div>
+              <div class="display-flex w-50">
+                <p>@</p>
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy host" id="proxy_host">
+              </div>
+              <div class="display-flex w-50">
+                <p>:</p>
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy port" id="proxy_port">
+              </div>
+            </div>
+            <div class="display-flex info_ajout_compte_password">
+              <div class="display-flex w-50">
+                <p>Username:</p>
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Username" id="user_username">
+              </div>
+              <div class="display-flex w-50">
+                <p>Password:</p>
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Password" id="user_password">
+              </div>
+              <div class="proxy_info">
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Host">
+              </div>
+              <div class="proxy_info">
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Port">
+              </div>
+
             </div>
           </div>
 
-          <div class="display-flex mb-3">
-            <div class="centrer pb-1 add_div_droit">
-              <p class="m-0 ecriture_add mr-3">Payment : </p>
-            </div>
-            <select class="select_nike add_select" name="" id="select_payment">
-              <option value="" disabled selected>Select your option</option>
-            </select>
-          </div>
-          <div class="display-flex">
-            <div class="centrer pb-1 add_div_droit">
-              <p class="m-0 ecriture_add mr-3">Shipping: </p>
-            </div>
-            <select class="select_nike add_select" name="" id="select_address">
-              <option value="" disabled selected>Select your option</option>
-            </select>
-          </div>
           <p class="error">error</p>
 
         </div>
@@ -78,14 +82,14 @@
       <!-- Modal content -->
       <div class="modal-content-chaussure">
         <div class="haut_chaussure">
-          <p>Add a new task</p>
+          <p>Edit</p>
         </div>
         <div class="info_chaussure p-4" style="color:white">
           blalblablablab
         </div>
         <div class="valider_chaussure">
           <div class="centrer_bouton">
-            <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBstdn">Add task</button>
+            <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBstdn">Save</button>
           </div>
         </div>
       </div>
@@ -93,24 +97,6 @@
     <div class="container-fluid h-100 p-0">
 
 
-
-      <!--address info-->
-      <div id="chaussure_add" class="modal modal-chaussure">
-        <!-- Modal content -->
-        <div class="modal-content-chaussure">
-          <div class="haut_chaussure">
-            <p>Add a new task</p>
-          </div>
-          <div class="info_chaussure p-4" style="color:white">
-            blalblablablab
-          </div>
-          <div class="valider_chaussure">
-            <div class="centrer_bouton">
-              <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBstdn">Add task</button>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="container-fluid h-100 p-0">
         <!-- Haut  -->
         <div class="navigateur">
@@ -198,7 +184,7 @@
                 <div class="form_addresse">
                   <div class="">
                     <div class="ligne_form">
-                      <div class="normal_sized_form">
+                      <div class="big_sized_form">
                         <input type="text" name="" value="" class="input_nike" placeholder="Address_name" id="address_name">
                       </div>
                     </div>
@@ -243,12 +229,12 @@
                       </div>
                     -->
                     </div>
-                    <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_addresse">Save changes</button>
+                    <button type="button" name="button" class="btn btn-primary btn_add_account btn_form mt-2" id="save_addresse">Add address</button>
                     <p class="error">error</p>
                   </div>
                 </div>
               </div>
-              <div class="bas_addresse p-5">
+              <div class="bas_addresse p-4">
                 <div class="liste_addresse" id="liste_addresse">
                   <div class="div_addresse centrer w-100">
                     <div class="div_addresse_millieu">
@@ -311,7 +297,13 @@
                         <input type="text" name="" value="" class="input_nike" placeholder="cvNumber" id="cvNumber">
                       </div>
                     </div>
-                    <button type="button" name="button" class="btn btn-primary btn_add_account mt-2" id="save_payment">Add payment</button>
+                    <div class="ligne_form">
+
+                    </div>
+                    <div class="ligne_form">
+
+                    </div>
+                    <button type="button" name="button" class="btn btn-primary btn_add_account btn_form mt-2" id="save_payment">Add payment</button>
                     <p class="error">error</p>
                   </div>
                 </div>
@@ -439,53 +431,35 @@
               <div class="account_element">
                 <div class="centrer_element">
                   <div class="display-flex">
-                    <div cla <!-- <div class="ligne_chaussures  ">
-                      <div class="el_chaussure">
-
-                      </div>
-                      <div class="el_chaussure">
-
-                      </div>
-                      <div class="el_chaussure">
-
-                      </div>
+                    <div class="name_div">
+                      <p>Thibault_mth</p>
                     </div>
-                    <div class="ligne_chaussures  ">
-                      <div class="el_chaussure">
-
-                      </div>
-                      <div class="el_chaussure">
-
-                      </div>
-                      <div class="el_chaussure">
-
-                      </div>
+                    <div class="proxy_div">
+                      <p>127.0.0.1</p>
                     </div>
-                    <p>Thibault_mth</p>
+                    <div class="shipping_div">
+                      <p>Jsp quoi mettre</p>
+                    </div>
+                    <div class="other_div">
+                      <p></p>
+                    </div>
                   </div>
-                  <div class="proxy_div">
-                    <p>127.0.0.1</p>
-                  </div>
-                  <div class="shipping_div">
-                    <p>Jsp quoi mettre</p>
-                  </div>
-                  <div class="other_div">
-                    <p></p>
-                  </div>
+
                 </div>
               </div>
+            </div>
+
+          </div>
+          <div class="accounts_bandeau centrer">
+            <div class="centrer_bouton">
+              <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBtn">Add account</button>
             </div>
 
           </div>
         </div>
 
 
-        <div class="accounts_bandeau centrer">
-          <div class="centrer_bouton">
-            <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBtn">Add account</button>
-          </div>
 
-        </div>
       </div>
 
 
