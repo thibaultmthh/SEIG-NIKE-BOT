@@ -308,7 +308,7 @@ p {
 
 /* Modal Content */
 .modal-content-account {
-  height: 55%;
+  height: 70%;
   position: relative;
   border-radius: 11px;
   background-color: #1a1935;
@@ -324,7 +324,7 @@ p {
 }
 
 .modal-content-chaussure {
-  height: 60%;
+  height: 70%;
   margin-top: 300px;
   position: relative;
   border-radius: 11px;
@@ -382,8 +382,8 @@ p {
 
 /*add account*/
 .haut_ajout_compte {
-  padding-top: 3px;
-  height: 20%;
+  padding-top: 5px;;
+  height: 15%;
   border-bottom: 3px solid #4126ff;
 }
 
@@ -394,11 +394,11 @@ p {
 }
 
 .info_ajout_compte {
-  height: 63%;
+  height: 73%;
 }
 
 .valider_ajout_account {
-  height: 17%;
+  height: 12%;
 }
 
 /*Page debut*/
@@ -530,7 +530,7 @@ p {
 }
 
 .add_div_droit {
-  width: 90px;
+  width: 94px;
 }
 
 .droite {
@@ -542,7 +542,7 @@ p {
 }
 
 .haut_addresse {
-  height: 50%;
+  height: 60%;
 }
 
 .div_addresse {
@@ -578,7 +578,7 @@ p {
   color: white;
   margin-left: 70px;
   font-size: 1.5em;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .form_addresse {
@@ -586,7 +586,7 @@ p {
   justify-content: center;
 }
 
-#save_addresse {
+.btn_form {
   width: 370px;
 }
 
@@ -608,7 +608,6 @@ p {
   cursor: pointer;
 }
 .error {
-  margin-top: 5px;
   color: red;
   font-size: 0.8em
 }
@@ -639,7 +638,10 @@ p {
 
 }
 .info_ajout_compte_password{
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+}
+.info_ajout_compte_password input,select{
+  background-color: #dedede; /*XDD*/
 }
 
 .info_ajout_compte_password p{
@@ -649,8 +651,27 @@ p {
   margin-right: 20px;
 }
 .add_select{
-  width: 373px;
+  width: 369px;
+}
+.bas_addresse{
+  height: 40%;
+  overflow: auto;
+}
+.proxy{
+  margin-top: 15px;
+  width: 400px;
+}
+.proxy p{
+  margin:0;
+
+}
+.proxy_info{
+  width: 25%;
+}
+.proxy_info input{
+  width: 90%;
 }
 /*4126ff*/
 /*14151d*/
 /*1a1935*/
+/*ffc107*/
