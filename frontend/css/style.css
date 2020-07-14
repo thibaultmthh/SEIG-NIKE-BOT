@@ -198,6 +198,7 @@ p {
 .accounts_bandeau {
   height: 8%;
   background-color: #1a1935;
+  color: #e4e4e4;
 }
 
 .presentation {
@@ -710,7 +711,9 @@ p {
 .del_account:hover img{
   opacity: 0.8;
 }
-
+.selectRegion{
+  width: 80px;
+}
 /*4126ff*/
 /*14151d*/
 /*1a1935*/
