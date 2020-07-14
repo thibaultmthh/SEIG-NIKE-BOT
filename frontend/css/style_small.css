@@ -1,0 +1,56 @@
+body, html {
+  height: 200px;
+  width: 450px;
+}
+
+.nopad{
+  padding: 0
+}
+.nomarg{
+  margin: 0;
+}
+.app{
+    background: #1a1935;
+}
+.logo{
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.bord{
+  height: 30%;
+}
+.btn{
+  margin-top: 15px;
+  background: #0074AB;
+  margin-left: 40px;
+}
+.btn_add_account {
+  background-color: #4126ff;
+  color: white;
+  display: inline-block;
+  font-weight: 400;
+  border: 0;
+}
+
+.btn_add_account:active {
+  background-color: #2c1c9e;
+}
+
+.btn_add_account:focus {
+  background-color: #3721d4 !important;
+}
+
+.btn_add_account:hover {
+  background-color: #3721d4;
+}
+
+#erreurs{
+  color: red !important;
+}
+input{
+padding-left: 5px;
+}
+input:focus{
+  outline: none
+}

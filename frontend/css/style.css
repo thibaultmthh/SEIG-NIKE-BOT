@@ -45,12 +45,15 @@ p {
 .h-90 {
   height: 90%;
 }
-.w-40{
+
+.w-40 {
   width: 40%
 }
-.w-45{
+
+.w-45 {
   width: 45%
 }
+
 .red {
   color: #CB0731 !important;
 }
@@ -238,6 +241,7 @@ p {
   margin-bottom: 14px;
   width: 99%;
   color: #e4e4e4;
+  position: relative;
 }
 
 .centrer_element p {
@@ -280,7 +284,6 @@ p {
 }
 
 .modal {
-
   padding-top: 200px;
   display: none;
   /* Hidden by default */
@@ -382,7 +385,8 @@ p {
 
 /*add account*/
 .haut_ajout_compte {
-  padding-top: 5px;;
+  padding-top: 5px;
+  ;
   height: 15%;
   border-bottom: 3px solid #4126ff;
 }
@@ -596,17 +600,20 @@ p {
   right: 0;
   width: 0px;
   height: 100%;
-  background-color:#4126ff ;
+  background-color: #ff3e3e;
   transition-duration: 0.5s;
 }
-.edit:hover .edit-logo{
+
+.edit:hover .edit-logo {
   opacity: 0.7;
   transition-duration: 0s;
   cursor: pointer;
 }
-.edit:hover{
+
+.edit:hover {
   cursor: pointer;
 }
+
 .error {
   color: red;
   font-size: 0.8em
@@ -631,46 +638,79 @@ p {
   animation-name: animatetop;
   animation-duration: 0.3s;
 }
-.edit-logo{
-  height: 20px;
-  margin:10px;
-  margin-left: 12px;
 
+.edit-logo {
+  height: 20px;
+  margin: 10px;
+  margin-left: 12px;
 }
-.info_ajout_compte_password{
+
+.info_ajout_compte_password {
   margin-bottom: 20px;
 }
-.info_ajout_compte_password input,select{
-  background-color: #dedede; /*XDD*/
+
+.info_ajout_compte_password input, select {
+  background-color: #dedede;
+  /*XDD*/
 }
 
-.info_ajout_compte_password p{
-  margin:0;
+.info_ajout_compte_password p {
+  margin: 0;
   overflow: hidden;
   padding-top: 2px;
   margin-right: 20px;
 }
-.add_select{
+
+.add_select {
   width: 369px;
 }
-.bas_addresse{
+
+.bas_addresse {
   height: 40%;
   overflow: auto;
 }
-.proxy{
+
+.proxy {
   margin-top: 15px;
   width: 400px;
 }
-.proxy p{
-  margin:0;
 
+.proxy p {
+  margin: 0;
 }
-.proxy_info{
+
+.proxy_info {
   width: 25%;
 }
-.proxy_info input{
+
+.proxy_info input {
   width: 90%;
 }
+
+.actions_accounts {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #222146;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.del_account {
+  width: 25%;
+  padding-top: 8px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.photo_poubelle{
+  cursor: pointer;
+}
+.del_account:hover img{
+  opacity: 0.8;
+}
+
 /*4126ff*/
 /*14151d*/
 /*1a1935*/
