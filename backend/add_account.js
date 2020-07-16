@@ -220,6 +220,7 @@ async function add_account(profile, users_ds, payment_methods_ds, address_ds) {
   card_info = payment_methods_ds.get_D(profile.pay_id)
   profile.status = "waiting"
   auth_data = await get_bearer_token(profile.username, profile.password, profile.proxy)
+  
   console.log(auth_data.user_id, "is the user id")
   if (auth_data.bearer_token != "") {
     set_address(auth_data.bearer_token, profile.proxy, auth_data.user_id, address)
@@ -230,6 +231,7 @@ async function add_account(profile, users_ds, payment_methods_ds, address_ds) {
   else {
     profile.error = "Can log in"
   }
+  console.log("add fini");
   users_ds.add_D(profile)
 
 

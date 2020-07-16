@@ -1,3 +1,5 @@
+ipc.send("get_all_users")
+
 ipc.on("all_address", (event, data)=>{
   $("#select_address").empty();
   for (let i in data) {
@@ -14,6 +16,13 @@ ipc.on("all_pay", (event, data)=>{
     $("#select_payment").append(element)
   }
 })
+
+ipc.on("all_users", (event, data)=>{console.log(data, "all_users");})
+
+
+
+
+
 
 
 $("#myBtdn").click(()=>{
@@ -34,4 +43,5 @@ $("#myBtdn").click(()=>{
 
   }
   console.log(acc_info);
+  ipc.send("set_user", acc_info)
 })
