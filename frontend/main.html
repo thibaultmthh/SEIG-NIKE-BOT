@@ -21,46 +21,43 @@
           <div class="display-flex info_ajout_compte_password">
             <div class="display-flex w-50">
               <p>Username:</p>
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="Username">
+              <input type="text" name="" value="" class="input_nike w-45" placeholder="Username" id="user_username">
             </div>
             <div class="display-flex w-50">
               <p>Password:</p>
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="Password">
+              <input type="text" name="" value="" class="input_nike w-45" placeholder="Password" id="user_password">
             </div>
           </div>
-          <div class="info_ajout_compte p-4 " style="color:white">
-            <div class="display-flex info_ajout_compte_password">
-              <div class="display-flex w-50">
-                <p></p>
-                <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy username" id="proxy_username">
-              </div>
-              <div class="display-flex w-50">
-                <p>:</p>
-                <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy password" id="proxy_password">
-              </div>
-              <div class="display-flex w-50">
-                <p>@</p>
-                <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy host" id="proxy_host">
-              </div>
-              <div class="display-flex w-50">
-                <p>:</p>
-                <input type="text" name="" value="" class="input_nike w-45" placeholder="proxy port" id="proxy_port">
-              </div>
+          <div class="display-flex info_ajout_compte_password">
+            <div class="centrer pb-1 add_div_droit">
+              <p class="m-0 ecriture_add mr-3">Payment: </p>
             </div>
-            <div class="display-flex info_ajout_compte_password">
-              <div class="display-flex w-50">
-                <p>Username:</p>
-                <input type="text" name="" value="" class="input_nike w-45" placeholder="Username" id="user_username">
-              </div>
-              <div class="display-flex w-50">
-                <p>Password:</p>
-                <input type="text" name="" value="" class="input_nike w-45" placeholder="Password" id="user_password">
+            <select class="select_nike add_select" name="" id="select_payment">
+              <option value="" disabled selected>Select your option</option>
+            </select>
+          </div>
+          <div class="display-flex info_ajout_compte_password">
+            <div class="centrer pb-1 add_div_droit">
+              <p class="m-0 ecriture_add mr-3">Shipping: </p>
+            </div>
+            <select class="select_nike add_select" name="" id="select_address">
+              <option value="" disabled selected>Select your option</option>
+            </select>
+          </div>
+          <div class="proxy">
+            <p class="mb-2">Proxy:</p>
+            <div class="display-flex info_ajout_compte_password ">
+              <div class="proxy_info">
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Username" id="proxy_username">
               </div>
               <div class="proxy_info">
-                <input type="text" name="" value="" class="input_nike w-45" placeholder="Host">
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Password" id="proxy_username">
               </div>
               <div class="proxy_info">
-                <input type="text" name="" value="" class="input_nike w-45" placeholder="Port">
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Host" id="proxy_host">
+              </div>
+              <div class="proxy_info">
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Port" id="proxy_port">
               </div>
 
             </div>
@@ -114,6 +111,9 @@
             <div id="Accounts" class="Accounts h-100">
               <p>Accounts</p>
             </div>
+            <div id="Tasks_real" class="Accounts h-100">
+              <p>Tasks</p>
+            </div>
           </div>
           <div class="croixs h-100">
             <div class="h-60 centrer_croixs">
@@ -155,9 +155,13 @@
           </div>
           <div class="accounts_bandeau centrer">
             <div class="centrer_bouton">
-
-              <select class="form-control selectRegion select-nike" id="selectRegion">
-              </select>
+              <div class="centrer">
+                <p class="m-0 mb-1 mr-3">Select a region :</p>
+              </div>
+              <div class="centrer">
+                <select class="form-control selectRegion select-nike" id="selectRegion">
+                </select>
+              </div>
             </div>
           </div>
         </div>
@@ -175,7 +179,7 @@
 
         <div class="main" id="profils_div">
           <div class="nom_onglet pl-5 pt-2">
-            <p>Shipping</p>
+            <p>Shipping/Payment</p>
           </div>
           <div class="display-flex accounts_container">
             <div class="droite pt-3">
@@ -343,16 +347,6 @@
 
 
         <div class="main" id="Accounts_div">
-          <div class="menu">
-            <ul class="menu-options">
-              <li class="menu-option">Back</li>
-              <li class="menu-option">Reload</li>
-              <li class="menu-option">Save</li>
-              <li class="menu-option">Save As</li>
-              <li class="menu-option">Inspect</li>
-            </ul>
-          </div>
-
           <div class="nom_onglet pl-5 pt-2">
             <p>Accounts</p>
           </div>
@@ -386,65 +380,14 @@
                       <p>Jsp quoi mettre</p>
                     </div>
                     <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--   -->
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="account_element">
-                <div class="centrer_element">
-                  <div class="display-flex">
-                    <div class="name_div">
-                      <p>Thibault_mth</p>
-                    </div>
-                    <div class="proxy_div">
-                      <p>127.0.0.1</p>
-                    </div>
-                    <div class="shipping_div">
-                      <p>Jsp quoi mettre</p>
-                    </div>
-                    <div class="other_div">
-                      <p></p>
-                    </div>
-                  </div>
 
+                    </div>
+                  </div>
+                </div>
+                <div class="actions_accounts">
+                  <div class="del_account">
+                    <img src="pictures/ths.png" alt="" class="h-75 photo_poubelle">
+                  </div>
                 </div>
               </div>
             </div>
@@ -460,9 +403,22 @@
 
 
 
+
+
+        <div class="main" id="Tasks_real_div">
+          <div class="nom_onglet pl-5 pt-2">
+            <p>Tasks</p>
+          </div>
+          <div class="accounts_container container ">
+          </div>
+        </div>
+
+
+
+
+
+
       </div>
-
-
       <script>
         window.$ = window.jQuery = require('jquery');
 
