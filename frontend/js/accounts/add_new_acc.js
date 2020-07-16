@@ -2,7 +2,7 @@ ipc.on("all_address", (event, data)=>{
   $("#select_address").empty();
   for (let i in data) {
     address = data[i]
-    let element = "<option value='"+address.id+"'  >"+address.name+"</option>"
+    let element = "<option value='"+address.id+"'  >"+address.address_name+"</option>"
     $("#select_address").append(element)
   }
 })

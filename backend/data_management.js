@@ -94,7 +94,6 @@ class Payment_methods extends Store {
         }
       }
     }
-    console.log(id, "no found in payment methods base");
     return 0
   }
 
@@ -106,6 +105,24 @@ class Payment_methods extends Store {
     this.set(this.data_name, this.datas)
     return data_add.id
   }
+  remove_D(id) {
+    if (this.get_D(id) === undefined) {
+
+    } else {
+
+      for (var i in this.datas) {
+        if (this.datas.hasOwnProperty(i)) {
+          if (this.datas[i].id == id) {
+            console.log("remove", id);
+            this.datas.splice(i, 1)
+          }
+        }
+      }
+    }
+
+    this.set(this.data_name, this.datas)
+  }
+
 }
 
 class Address extends Store {
@@ -142,7 +159,7 @@ class Address extends Store {
     return 0
   }
 
-  
+
 
   add_D(data_add) {
     data_add.id = uuidv4()
@@ -151,6 +168,22 @@ class Address extends Store {
 
     this.set(this.data_name, this.datas)
     return data_add.id
+  }
+  remove_D(id) {
+    if (this.get_D(id) === undefined) {
+
+    } else {
+
+      for (var i in this.datas) {
+        if (this.datas.hasOwnProperty(i)) {
+          if (this.datas[i].id == id) {
+            this.datas.splice(i, 1)
+          }
+        }
+      }
+    }
+
+    this.set(this.data_name, this.datas)
   }
 }
 

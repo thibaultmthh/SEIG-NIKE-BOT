@@ -1,23 +1,41 @@
 ipc.send("get_all_address", "")
 ipc.send("get_all_pay")
+
+
+
+
+
+
+
 ipc.on("all_address", (event, data) => {
+  console.log(data);
   $("#liste_addresse").empty()
   for (let i in data) {
     address = data[i]
-    let div_addresse = "<div class='div_addresse centrer w-100'>"+
-"        <div class='div_addresse_millieu'>"+
-"          <p>"+address.address1+"</p>"+
-"          <p>"+address.city+"</p>"+
-"          <div class='edit' style='' id='"+address.id+"'>"+
-"            <img src='pictures/th.png' alt='' class='edit-logo'>"+
-"          </div>"+
-"        </div>"+
-"      </div>"
+
+    let div_addresse = "<div class='div_addresse centrer w-100'>" +
+      "        <div class='div_addresse_millieu'>" +
+      "          <p>" + address.address_name + "</p>" +
+      "          <p>" + address.city + "</p>" +
+      "          <div class='edit edit_address' style='' id='" + address.id + "'>" +
+      "            <img src='pictures/th.png' alt='' class='edit-logo'>" +
+      "          </div>" +
+      "        </div>" +
+      "      </div>"
 
     $("#liste_addresse").append(div_addresse)
   }
 
-  console.log(data);
+  $("div.edit_address").on("click", (event) => {
+    //event.preventDefault()
+    let current = event.currentTarget
+    console.log(current.getAttribute("id"));
+    event.currentTarget.parentElement.parentElement.remove()
+    console.log(event);
+    ipc.send("remove_address", current.getAttribute("id"));
+
+  })
+
 })
 
 
@@ -27,17 +45,25 @@ ipc.on("all_pay", (event, data) => {
   for (let i in data) {
     card = data[i]
     console.log(address);
-    let div_card = "<div class='div_addresse centrer w-100'>"+
-"        <div class='div_addresse_millieu'>"+
-"          <p>"+card.accountNumber+"</p>"+
-"          <p>"+card.cardType+"</p>"+
-"          <div class='edit' style='' id='"+card.id+"'>"+
-"            <img src='pictures/th.png' alt='' class='edit-logo'>"+
-"          </div>"+
-"        </div>"+
-"      </div>"
+    let div_card = "<div class='div_addresse centrer w-100'>" +
+      "        <div class='div_addresse_millieu'>" +
+      "          <p>" + card.accountNumber + "</p>" +
+      "          <p>" + card.cardType + "</p>" +
+      "          <div class='edit edit_pay' style='' id='" + card.id + "'>" +
+      "            <img src='pictures/th.png' alt='' class='edit-logo'>" +
+      "          </div>" +
+      "        </div>" +
+      "      </div>"
 
     $("#liste_card").append(div_card)
+    $("div.edit_pay").on("click", (event) => {
+      //event.preventDefault()
+      let current = event.currentTarget
+      console.log(current.getAttribute("id"));
+      ipc.send("remove_pay", current.getAttribute("id"));
+
+    })
+
   }
 
   console.log(data);
@@ -46,9 +72,10 @@ ipc.on("all_pay", (event, data) => {
 
 
 
-$("#save_address").on("click",()=>{
+$("#save_addresse").on("click", () => {
   console.log("blabala");
   var address = {
+    "address_name": $("#address_name").val().trim(),
     "firstName": $("#input_Fname").val().trim(),
     "lastName": $("#input_Lname").val().trim(),
     "address1": $("#input_address1").val().trim(),
@@ -63,6 +90,7 @@ $("#save_address").on("click",()=>{
   }
   console.log(address);
   ipc.send("set_address", address)
+  $("#address_name").empty()
   $("#input_Fname").empty()
   $("#input_Lname").empty()
   $("#input_address1").empty()
@@ -76,7 +104,7 @@ $("#save_address").on("click",()=>{
 
 
 
-$("#save_payment").click(()=>{
+$("#save_payment").click(() => {
   console.log("blabala");
   var card_info = {
     "accountNumber": $('#accountNumber').val().trim(),
@@ -95,11 +123,6 @@ $("#save_payment").click(()=>{
   ipc.send("get_all_pay", "")
 
 })
-
-
-
-
-
 
 
 

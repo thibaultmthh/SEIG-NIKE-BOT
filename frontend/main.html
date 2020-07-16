@@ -1,442 +1,446 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <title></title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/thibaultcss.css">
+    <title></title>
+  </head>
 
-<body>
-  <div id="myModal" class="modal">
+  <body>
+    <div id="myModal" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content-account">
-      <div class="haut_ajout_compte">
-        <p>Add a new nike account</p>
-      </div>
-      <div class="info_ajout_compte p-4" style="color:white;">
-
-        <div class="display-flex info_ajout_compte_password">
-          <div class="display-flex w-50">
-            <p>Username:</p>
-            <input type="text" name="" value="" class="input_nike w-45" placeholder="Username" id="user_username">
-          </div>
-          <div class="display-flex w-50">
-            <p>Password:</p>
-            <input type="text" name="" value="" class="input_nike w-45" placeholder="Password" id="user_password">
-          </div>
+      <!-- Modal content -->
+      <div class="modal-content-account">
+        <div class="haut_ajout_compte">
+          <p>Add a new nike account</p>
         </div>
-        <div class="display-flex info_ajout_compte_password">
-          <div class="centrer pb-1 add_div_droit">
-            <p class="m-0 ecriture_add mr-3">Payment: </p>
-          </div>
-          <select class="select_nike add_select" name="" id="select_payment">
-            <option value="" disabled selected>Select your option</option>
-          </select>
-        </div>
-        <div class="display-flex info_ajout_compte_password">
-          <div class="centrer pb-1 add_div_droit">
-            <p class="m-0 ecriture_add mr-3">Shipping: </p>
-          </div>
-          <select class="select_nike add_select" name="" id="select_address">
-            <option value="" disabled selected>Select your option</option>
-          </select>
-        </div>
-        <div class="proxy">
-          <p class="mb-2">Proxy:</p>
-          <div class="display-flex info_ajout_compte_password ">
-            <div class="proxy_info">
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="Username" id="proxy_username">
-            </div>
-            <div class="proxy_info">
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="Password" id="proxy_username">
-            </div>
-            <div class="proxy_info">
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="Host" id="proxy_host">
-            </div>
-            <div class="proxy_info">
-              <input type="text" name="" value="" class="input_nike w-45" placeholder="Port" id="proxy_port">
-            </div>
+        <div class="info_ajout_compte p-4" style="color:white;">
 
+          <div class="display-flex info_ajout_compte_password">
+            <div class="display-flex w-50">
+              <p>Username:</p>
+              <input type="text" name="" value="" class="input_nike w-45" placeholder="Username" id="user_username">
+            </div>
+            <div class="display-flex w-50">
+              <p>Password:</p>
+              <input type="text" name="" value="" class="input_nike w-45" placeholder="Password" id="user_password">
+            </div>
           </div>
+          <div class="display-flex info_ajout_compte_password">
+            <div class="centrer pb-1 add_div_droit">
+              <p class="m-0 ecriture_add mr-3">Payment: </p>
+            </div>
+            <select class="select_nike add_select" name="" id="select_payment">
+              <option value="" disabled selected>Select your option</option>
+            </select>
+          </div>
+          <div class="display-flex info_ajout_compte_password">
+            <div class="centrer pb-1 add_div_droit">
+              <p class="m-0 ecriture_add mr-3">Shipping: </p>
+            </div>
+            <select class="select_nike add_select" name="" id="select_address">
+              <option value="" disabled selected>Select your option</option>
+            </select>
+          </div>
+          <div class="proxy">
+            <p class="mb-2">Proxy:</p>
+            <div class="display-flex info_ajout_compte_password ">
+              <div class="proxy_info">
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Username" id="proxy_username">
+              </div>
+              <div class="proxy_info">
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Password" id="proxy_username">
+              </div>
+              <div class="proxy_info">
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Host" id="proxy_host">
+              </div>
+              <div class="proxy_info">
+                <input type="text" name="" value="" class="input_nike w-45" placeholder="Port" id="proxy_port">
+              </div>
+
+            </div>
+          </div>
+
+          <p class="error">error</p>
+
         </div>
-
-        <p class="error">error</p>
-
-      </div>
-      <div class="valider_ajout_account">
-        <div class="centrer_bouton">
-          <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBtdn">Add account</button>
+        <div class="valider_ajout_account">
+          <div class="centrer_bouton">
+            <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBtdn">Add account</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!--Add chaussure -->
-  <div id="chaussure_add" class="modal modal-chaussure">
-    <!-- Modal content -->
-    <div class="modal-content-chaussure">
-      <div class="haut_chaussure">
-        <p>Edit</p>
-      </div>
-      <div class="info_chaussure p-4" style="color:white">
-        blalblablablab
-      </div>
-      <div class="valider_chaussure">
-        <div class="centrer_bouton">
-          <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBstdn">Save</button>
+    <!--Add chaussure -->
+    <div id="chaussure_add" class="modal modal-chaussure">
+      <!-- Modal content -->
+      <div class="modal-content-chaussure">
+        <div class="haut_chaussure">
+          <p>Edit</p>
+        </div>
+        <div class="info_chaussure p-4" style="color:white">
+          blalblablablab
+        </div>
+        <div class="valider_chaussure">
+          <div class="centrer_bouton">
+            <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBstdn">Save</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid h-100 p-0">
-
-
     <div class="container-fluid h-100 p-0">
-      <!-- Haut  -->
-      <div class="navigateur">
-        <div class="logo h-100">
-          <img src="pictures/logov.png" class="h-100" alt="Logo">
-        </div>
-        <div class="choix_nav h-100">
 
-          <div id="Tasks" class="Tasks h-100 ligne_bas">
+
+      <div class="container-fluid h-100 p-0">
+        <!-- Haut  -->
+        <div class="navigateur">
+          <div class="logo h-100">
+            <img src="pictures/logov.png" class="h-100" alt="Logo">
+          </div>
+          <div class="choix_nav h-100">
+
+            <div id="Tasks" class="Tasks h-100 ligne_bas">
+              <p>Home</p>
+            </div>
+            <div id="Shipping" class="Shipping h-100">
+              <p>Shipping</p>
+            </div>
+            <div id="Accounts" class="Accounts h-100">
+              <p>Accounts</p>
+            </div>
+            <div id="Tasks_real" class="Accounts h-100">
+              <p>Tasks</p>
+            </div>
+          </div>
+          <div class="croixs h-100">
+            <div class="h-60 centrer_croixs">
+              <!--<a href="#"><img src="pictures/croix.png" class="h-100" alt=""></a>-->
+              <a href="#"><img src="pictures/moins.png" class="h-100" alt=""></a>
+              <a href="#"><img src="pictures/croix.png" class="h-100" alt="close"></a>
+            </div>
+          </div>
+        </div>
+        <!-- Main  -->
+        <div class="main" id="Tasks_div" style="display:block;">
+
+          <div class="nom_onglet pl-5 pt-2">
             <p>Home</p>
           </div>
-          <div id="Shipping" class="Shipping h-100">
-            <p>Shipping</p>
-          </div>
-          <div id="Accounts" class="Accounts h-100">
-            <p>Accounts</p>
-          </div>
-          <div id="Tasks_real" class="Accounts h-100">
-            <p>Tasks</p>
-          </div>
-        </div>
-        <div class="croixs h-100">
-          <div class="h-60 centrer_croixs">
-            <!--<a href="#"><img src="pictures/croix.png" class="h-100" alt=""></a>-->
-            <a href="#"><img src="pictures/moins.png" class="h-100" alt=""></a>
-            <a href="#"><img src="pictures/croix.png" class="h-100" alt="close"></a>
-          </div>
-        </div>
-      </div>
-      <!-- Main  -->
-      <div class="main" id="Tasks_div" style="display:block;">
+          <div class="chaussure_container container-fluid pr-4 pl-4" id="chaussure_avaliable_list">
 
-        <div class="nom_onglet pl-5 pt-2">
-          <p>Home</p>
-        </div>
-        <div class="chaussure_container container-fluid pr-4 pl-4" id="chaussure_avaliable_list">
-
-          <div class='ligne_chaussures'>
-            <div class='el_chaussure'>
-              <div class='h-75 p-3 haut_el_chaussure'>
-                <img src='https://secure-images.nike.com/is/image/DotCom/555088_126' alt='photo'>
-                <div class=''>
-                  <p class='nom_chaussure'>Air Jordan 1 Retro High OG</p>
-                  <p class='prix_chaussure'> <span class='mr-2'><b>Price:</b></span>170$</p>
-                  <div class="display-flex">
-                    <p class="mr-2"> <b>Size:</b> </p>
-                    <select class="select_nike" name="">
-                      <option value="test">test</option>
-                    </select>
+            <div class='ligne_chaussures'>
+              <div class='el_chaussure'>
+                <div class='h-75 p-3 haut_el_chaussure'>
+                  <img src='https://secure-images.nike.com/is/image/DotCom/555088_126' alt='photo'>
+                  <div class=''>
+                    <p class='nom_chaussure'>Air Jordan 1 Retro High OG</p>
+                    <p class='prix_chaussure'> <span class='mr-2'><b>Price:</b></span>170$</p>
+                    <div class="display-flex">
+                      <p class="mr-2"> <b>Size:</b> </p>
+                      <select class="select_nike" name="">
+                        <option value="test">test</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
+                <div class='p-3 centrer'>
+                  <button type="button" name="button " class="btn btn-primary btn_add_account start_task">Start task</button>
+                </div>
               </div>
-              <div class='p-3 centrer'>
-                <button type="button" name="button " class="btn btn-primary btn_add_account start_task">Start task</button>
+            </div>
+
+          </div>
+          <div class="accounts_bandeau centrer">
+            <div class="centrer_bouton">
+              <div class="centrer">
+                <p class="m-0 mb-1 mr-3">Select a region :</p>
+              </div>
+              <div class="centrer">
+                <select class="form-control selectRegion select-nike" id="selectRegion">
+                </select>
               </div>
             </div>
           </div>
-
         </div>
-        <div class="accounts_bandeau centrer">
-          <div class="centrer_bouton">
-            <div class="centrer">
-              <p class="m-0 mb-1 mr-3">Select a region :</p>
-            </div>
-            <div class="centrer">
-              <select class="form-control selectRegion select-nike" id="selectRegion">
-              </select>
-            </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- Billing div -->
+
+        <div class="main" id="profils_div">
+          <div class="nom_onglet pl-5 pt-2">
+            <p>Shipping/Payment</p>
           </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-
-
-      <!-- Billing div -->
-
-      <div class="main" id="profils_div">
-        <div class="nom_onglet pl-5 pt-2">
-          <p>Shipping/Payment</p>
-        </div>
-        <div class="display-flex accounts_container">
-          <div class="droite pt-3">
-            <div class="haut_addresse">
-              <p class="titre_shipping">Addresses</p>
-              <div class="form_addresse">
-                <div class="">
-                  <div class="ligne_form">
-                    <div class="big_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="Address_name" id="address_name">
+          <div class="display-flex accounts_container">
+            <div class="droite pt-3">
+              <div class="haut_addresse">
+                <p class="titre_shipping">Addresses</p>
+                <div class="form_addresse">
+                  <div class="">
+                    <div class="ligne_form">
+                      <div class="big_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Address_name" id="address_name">
+                      </div>
                     </div>
-                  </div>
-                  <div class="ligne_form">
-                    <div class="normal_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="First Name" id="input_Fname">
-                    </div>
-                    <div class="normal_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="Last name" id="input_Lname">
+                    <div class="ligne_form">
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="First Name" id="input_Fname">
+                      </div>
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Last name" id="input_Lname">
 
 
+                      </div>
                     </div>
-                  </div>
-                  <div class="ligne_form">
-                    <div class="big_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="Address" id="input_address1">
+                    <div class="ligne_form">
+                      <div class="big_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Address" id="input_address1">
+                      </div>
                     </div>
-                  </div>
-                  <div class="ligne_form">
-                    <div class="normal_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="State" id="input_state">
+                    <div class="ligne_form">
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="State" id="input_state">
+                      </div>
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="City" id="input_city">
+                      </div>
                     </div>
-                    <div class="normal_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="City" id="input_city">
+                    <div class="ligne_form">
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Postal code" id="input_postal_code">
+                      </div>
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Country" id="input_country">
+                      </div>
                     </div>
-                  </div>
-                  <div class="ligne_form">
-                    <div class="normal_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="Postal code" id="input_postal_code">
-                    </div>
-                    <div class="normal_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="Country" id="input_country">
-                    </div>
-                  </div>
-                  <div class="ligne_form">
-                    <div class="normal_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="Phone number" id="input_phone_number">
-                    </div>
-                    <!--
+                    <div class="ligne_form">
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="Phone number" id="input_phone_number">
+                      </div>
+                      <!--
                       <div class="normal_sized_form">
                         <input type="text" name="" value="" class="input_nike" placeholder="Email">
                       </div>
                     -->
+                    </div>
+                    <button type="button" name="button" class="btn btn-primary btn_add_account btn_form mt-2" id="save_addresse">Add address</button>
+                    <p class="error">error</p>
                   </div>
-                  <button type="button" name="button" class="btn btn-primary btn_add_account btn_form mt-2" id="save_addresse">Add address</button>
-                  <p class="error">error</p>
+                </div>
+              </div>
+              <div class="bas_addresse p-4">
+                <div class="liste_addresse" id="liste_addresse">
+                  <div class="div_addresse centrer w-100">
+                    <div class="div_addresse_millieu">
+                      <p>Nom de l'addresse</p>
+                      <p>Ville</p>
+                      <div class="edit" style="">
+                        <img src="pictures/th.png" alt="" class="edit-logo">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="div_addresse centrer w-100">
+                    <div class="div_addresse_millieu">
+                      <p>Nom de l'addresse</p>
+                      <p>Ville</p>
+                      <div class="edit" style="">
+                        <img src="pictures/th.png" alt="" class="edit-logo">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="div_addresse centrer w-100">
+                    <div class="div_addresse_millieu">
+                      <p>Nom de l'addresse</p>
+                      <p>Ville</p>
+                      <div class="edit" style="">
+                        <img src="pictures/th.png" alt="" class="edit-logo">
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bas_addresse p-4">
-              <div class="liste_addresse" id="liste_addresse">
-                <div class="div_addresse centrer w-100">
-                  <div class="div_addresse_millieu">
-                    <p>Nom de l'addresse</p>
-                    <p>Ville</p>
-                    <div class="edit" style="">
-                      <img src="pictures/th.png" alt="" class="edit-logo">
+            <div class="gauche pt-3">
+              <div class="haut_addresse">
+                <p class="titre_shipping">Payment</p>
+                <div class="form_addresse">
+                  <div class="">
+                    <div class="ligne_form">
+                      <div class="big_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="accountNumber" id="accountNumber">
+                      </div>
                     </div>
-                  </div>
+                    <div class="ligne_form">
+                      <div class="big_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="cardType" id="cardType">
+                      </div>
+                    </div>
+                    <div class="ligne_form">
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="expirationMonth" id="expirationMonth">
+                      </div>
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="expirationYear" id="expirationMonth">
+                      </div>
+                    </div>
+                    <div class="ligne_form">
+                      <div class="normal_sized_form">
+                        <input type="text" name="" value="" class="input_nike" placeholder="cvNumber" id="cvNumber">
+                      </div>
+                    </div>
+                    <div class="ligne_form">
 
+                    </div>
+                    <div class="ligne_form">
+
+                    </div>
+                    <button type="button" name="button" class="btn btn-primary btn_add_account btn_form mt-2" id="save_payment">Add payment</button>
+                    <p class="error">error</p>
+                  </div>
                 </div>
-                <div class="div_addresse centrer w-100">
-                  <div class="div_addresse_millieu">
-                    <p>Nom de l'addresse</p>
-                    <p>Ville</p>
-                    <div class="edit" style="">
-                      <img src="pictures/th.png" alt="" class="edit-logo">
-                    </div>
-                  </div>
+              </div>
 
-                </div>
-                <div class="div_addresse centrer w-100">
-                  <div class="div_addresse_millieu">
-                    <p>Nom de l'addresse</p>
-                    <p>Ville</p>
-                    <div class="edit" style="">
-                      <img src="pictures/th.png" alt="" class="edit-logo">
+              <div class="bas_addresse p-4">
+                <div class="liste_addresse" id="liste_card">
+                  <div class="div_addresse centrer w-100">
+                    <div class="div_addresse_millieu">
+                      <p>Numero de carte</p>
+                      <p>Cardetype</p>
+                      <div class="edit" style="">
+                        <img src="pictures/th.png" alt="" class="edit-logo">
+                      </div>
                     </div>
-                  </div>
 
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="gauche pt-3">
-            <div class="haut_addresse">
-              <p class="titre_shipping">Payment</p>
-              <div class="form_addresse">
-                <div class="">
-                  <div class="ligne_form">
-                    <div class="big_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="accountNumber" id="accountNumber">
-                    </div>
-                  </div>
-                  <div class="ligne_form">
-                    <div class="big_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="cardType" id="cardType">
-                    </div>
-                  </div>
-                  <div class="ligne_form">
-                    <div class="normal_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="expirationMonth" id="expirationMonth">
-                    </div>
-                    <div class="normal_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="expirationYear" id="expirationMonth">
-                    </div>
-                  </div>
-                  <div class="ligne_form">
-                    <div class="normal_sized_form">
-                      <input type="text" name="" value="" class="input_nike" placeholder="cvNumber" id="cvNumber">
-                    </div>
-                  </div>
-                  <div class="ligne_form">
 
-                  </div>
-                  <div class="ligne_form">
 
-                  </div>
-                  <button type="button" name="button" class="btn btn-primary btn_add_account btn_form mt-2" id="save_payment">Add payment</button>
-                  <p class="error">error</p>
-                </div>
-              </div>
-            </div>
+          <div class="accounts_bandeau centrer">
+            <div class="centrer_bouton">
 
-            <div class="bas_addresse p-4">
-              <div class="liste_addresse" id="liste_card">
-                <div class="div_addresse centrer w-100">
-                  <div class="div_addresse_millieu">
-                    <p>Numero de carte</p>
-                    <p>Cardetype</p>
-                    <div class="edit" style="">
-                      <img src="pictures/th.png" alt="" class="edit-logo">
-                    </div>
-                  </div>
-
-                </div>
-              </div>
             </div>
           </div>
         </div>
 
 
-        <div class="accounts_bandeau centrer">
-          <div class="centrer_bouton">
+
+
+
+
+
+
+
+        <div class="main" id="Accounts_div">
+          <div class="nom_onglet pl-5 pt-2">
+            <p>Accounts</p>
+          </div>
+          <div class="accounts_container container ">
+            <div class="presentation ">
+              <div class="name_div">
+                <p>Name</p>
+              </div>
+              <div class="proxy_div">
+                <p>Proxy</p>
+              </div>
+              <div class="shipping_div">
+                <p>Shipping</p>
+              </div>
+              <div class="other_div">
+                <p>Actions</p>
+              </div>
+            </div>
+            <div class="all_account_container ">
+              <!--exemple élément-->
+              <div class="account_element">
+                <div class="centrer_element">
+                  <div class="display-flex">
+                    <div class="name_div">
+                      <p>Thibault_mth</p>
+                    </div>
+                    <div class="proxy_div">
+                      <p>127.0.0.1</p>
+                    </div>
+                    <div class="shipping_div">
+                      <p>Jsp quoi mettre</p>
+                    </div>
+                    <div class="other_div">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="actions_accounts">
+                  <div class="del_account">
+                    <img src="pictures/ths.png" alt="" class="h-75 photo_poubelle">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="accounts_bandeau centrer">
+            <div class="centrer_bouton">
+              <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBtn">Add account</button>
+            </div>
 
           </div>
         </div>
+
+
+
+
+
+        <div class="main" id="Tasks_real_div">
+          <div class="nom_onglet pl-5 pt-2">
+            <p>Tasks</p>
+          </div>
+          <div class="accounts_container container ">
+          </div>
+        </div>
+
+
+
+
+
+
       </div>
+      <script>
+        window.$ = window.jQuery = require('jquery');
 
+      </script>
+      <script type="text/javascript">
+        const ipc = require('electron').ipcRenderer;
 
+      </script>
+      <script>
+        window.$ = window.jQuery = require('jquery');
 
+      </script>
 
+      <script type="text/javascript" src="js/home/main_home.js"></script>
+      <script type="text/javascript" src="js/billing/add_new_address.js"></script>
+      <script type="text/javascript" src="js/accounts/add_new_acc.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" src="js/avoir.js">
 
+      </script>
 
-
-
-
-      <div class="main" id="Accounts_div">
-        <div class="nom_onglet pl-5 pt-2">
-          <p>Accounts</p>
-        </div>
-        <div class="accounts_container container ">
-          <div class="presentation ">
-            <div class="name_div">
-              <p>Name</p>
-            </div>
-            <div class="proxy_div">
-              <p>Proxy</p>
-            </div>
-            <div class="shipping_div">
-              <p>Shipping</p>
-            </div>
-            <div class="other_div">
-              <p>Actions</p>
-            </div>
-          </div>
-          <div class="all_account_container ">
-            <!--exemple élément-->
-            <div class="account_element">
-              <div class="centrer_element">
-                <div class="display-flex">
-                  <div class="name_div">
-                    <p>Thibault_mth</p>
-                  </div>
-                  <div class="proxy_div">
-                    <p>127.0.0.1</p>
-                  </div>
-                  <div class="shipping_div">
-                    <p>Jsp quoi mettre</p>
-                  </div>
-                  <div class="other_div">
-
-                  </div>
-                </div>
-              </div>
-              <div class="actions_accounts">
-                <div class="del_account">
-                  <img src="pictures/ths.png" alt="" class="h-75 photo_poubelle">
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="accounts_bandeau centrer">
-          <div class="centrer_bouton">
-            <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBtn">Add account</button>
-          </div>
-
-        </div>
-      </div>
-
-
-
-
-
-      <div class="main" id="Tasks_real_div">
-        <div class="nom_onglet pl-5 pt-2">
-          <p>Tasks</p>
-        </div>
-        <div class="accounts_container container ">
-        </div>
-      </div>
-
-
-
-
-
-
-    </div>
-    <script>
-      window.$ = window.jQuery = require('jquery');
-    </script>
-    <script type="text/javascript">
-      const ipc = require('electron').ipcRenderer;
-    </script>
-    <script>
-      window.$ = window.jQuery = require('jquery');
-    </script>
-
-    <script type="text/javascript" src="js/home/main_home.js"></script>
-    <script type="text/javascript" src="js/billing/add_new_address.js"></script>
-    <script type="text/javascript" src="js/accounts/add_new_acc.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/avoir.js">
-
-    </script>
-
-</body>
+  </body>
 
 </html>

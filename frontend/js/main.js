@@ -51,22 +51,23 @@ Tasks_real.addEventListener("click", function() {
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var modal_chaussure = document.getElementById("chaussure_add");
-var userSelection = document.getElementsByClassName('edit');
 
 btn.addEventListener("click", function() {
   modal.style.display = "block";
 })
 
+
+/*
 console.log(userSelection.length);
 
-
+var userSelection = document.getElementsByClassName('edit');
 for(let i = 0; i < userSelection.length; i++) {
   userSelection[i].addEventListener("click", function() {
     console.log("Clicked index: " + userSelection[i]);
     modal_chaussure.style.display = "block";
   })
 }
-
+*/
 
 window.onclick = function(event) {
   console.log("oui");

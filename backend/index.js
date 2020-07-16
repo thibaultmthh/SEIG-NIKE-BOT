@@ -137,11 +137,12 @@ function main() {
   ipcMain.on("set_address", (event, data)=> {address_ds.add_D(data)})
   ipcMain.on("get_all_address", ()=>{mainWindow.webContents.send("all_address", address_ds.datas)})
   ipcMain.on("update_address", (event, data)=> {address_ds.update_D(data)})
-
+  ipcMain.on("remove_address", (event, data)=>{address_ds.remove_D(data);})
   //pay method managment
   ipcMain.on("set_pay", (event, data)=> {payment_methods_ds.add_D(data)})
   ipcMain.on("get_all_pay", ()=>{mainWindow.webContents.send("all_pay", payment_methods_ds.datas)})
   ipcMain.on("update_pay", (event, data)=> {payment_methods_ds.update_D(data)})
+  ipcMain.on("remove_pay", (event, data)=>{address_ds.remove_D(data)})
 
 
   //user managment
