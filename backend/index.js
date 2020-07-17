@@ -118,9 +118,6 @@ var profile = {
 function main() {
   mainWindow = mainWin()
 
-
-
-
   //dashboard
   ipcMain.on("get_region_list", (event, data) => {console.log("okkay");
     mainWindow.webContents.send("region_list", Object.keys(perm_data.region_info))

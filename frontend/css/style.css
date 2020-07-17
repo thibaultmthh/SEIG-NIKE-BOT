@@ -258,7 +258,7 @@ p {
   overflow: auto;
   height: 90%;
 }
-
+/*
 .btn_add_account {
   background-color: #4126ff;
   color: white;
@@ -278,7 +278,7 @@ p {
 .btn_add_account:hover {
   background-color: #3721d4;
 }
-
+*/
 .centrer_bouton {
   display: flex;
   justify-content: center;
@@ -443,12 +443,13 @@ p {
   box-shadow: 5px 5px 20px rgba(10, 253, 255, 0.5);
 }
 
+/*
 .el_chaussure button {}
 
 .el_chaussure:hover button {
   height: auto;
 }
-
+*/
 .haut_el_chaussure {
   display: flex;
 }
@@ -634,11 +635,20 @@ p {
   display: none;
 }
 
+/*
 .el_chaussure:hover button {
   display: block;
   animation-name: animatetop;
   animation-duration: 0.3s;
 }
+*/
+.el_chaussure button {
+  display: block;
+  
+}
+
+
+
 
 .edit-logo {
   height: 20px;
