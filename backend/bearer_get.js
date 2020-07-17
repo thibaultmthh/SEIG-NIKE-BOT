@@ -22,7 +22,7 @@ async function get_bearer_token(username, password, proxy) {
     args: ['--enable-features=NetworkService', "--proxy-server=http://" + proxy.domain + ":" + proxy.port],
     ignoreHTTPSErrors: true,
     slowMo:10,
-    headless: false
+    headless: true
 
   });
   const page = await browser.newPage();

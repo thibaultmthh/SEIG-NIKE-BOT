@@ -1,4 +1,7 @@
 ipc.send("get_all_users")
+ipc.send("get_all_address")
+ipc.send("get_all_pay")
+
 
 ipc.on("all_address", (event, data)=>{
   $("#select_address").empty();

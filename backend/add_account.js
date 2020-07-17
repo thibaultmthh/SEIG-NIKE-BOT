@@ -6,6 +6,11 @@ const {
 const {
   get_bearer_token
 } = require("./bearer_get.js")
+const request = require("request")
+const {
+  v4: uuidv4
+} = require('uuid');
+
 
 /*
 const user_ds = new Users_DS()
@@ -32,7 +37,7 @@ var profile = {
   "username": "bastiTricky@gmx.de",
   'password': "Schuhe123#",
   "proxy": proxy,
-  "id_info":{
+  "id_info": {
     "bearer_token": "",
     "refresh_token": "",
     "client_id": "",
@@ -220,19 +225,19 @@ async function add_account(profile, users_ds, payment_methods_ds, address_ds) {
   card_info = payment_methods_ds.get_D(profile.pay_id)
   profile.status = "waiting"
   auth_data = await get_bearer_token(profile.username, profile.password, profile.proxy)
-  
+
   console.log(auth_data.user_id, "is the user id")
   if (auth_data.bearer_token != "") {
     set_address(auth_data.bearer_token, profile.proxy, auth_data.user_id, address)
     set_payment_method(auth_data.bearer_token, profile.proxy, card_info, address)
+    users_ds.add_D(profile)
 
 
-  }
-  else {
+  } else {
     profile.error = "Can log in"
   }
   console.log("add fini");
-  users_ds.add_D(profile)
+
 
 
 }
