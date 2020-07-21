@@ -216,33 +216,66 @@ class Perm_data {
   }
 }
 
-/*
-class Tasks extends Store() {
-  constructor() {
-    super();
-    this.data_name = "tasks_datas"
-    this.datas = this.get(this.data_name) || [] // payment_methods
-  }
-  add_D(data_add) {
-    console.log("add address", data_add);
-    this.datas.push(data_add)
 
-    this.set(this.data_name, this.datas)
+
+
+class Tasks extends Store {
+  constructor() {
+    super()
+    this.data_name = "tasks_data"
+    this.datas = this.get(this.data_name) || [] // user
+    //this.datas = []
+
   }
   get_D(id) {
     for (var index in this.datas) {
       if (this.datas.hasOwnProperty(index)) {
-        if (this.datas[index].id == id) {
+        if (this.datas[index].pair_id == id) {
           return this.datas[index]
         }
       }
     }
-    console.log(id, "task no found");
+    console.log(id, "no found in task base");
     return 0
   }
 
+  update_D(data){
+    var id = data.pair_id
+    for (var index in this.datas) {
+      if (this.datas.hasOwnProperty(index)) {
+        if (this.datas[index].pair_id == id) {
+          this.datas[index] = data
+        }
+      }
+    }
+    console.log(id, "no found in task base");
+    return 0
+  }
+
+
+
+  add_D(task_data) {
+    console.log("add user", task_data);
+    if (this.get_D(task_data.pair_id) == 0) {
+      this.datas.push(task_data)
+      console.log(task_data, "saved in user base")
+    } else {
+
+      for (var index in this.datas) {
+        if (this.datas.hasOwnProperty(index)) {
+          if (this.datas[index].pair_id == task_data.pair_id) {
+            this.datas[index] = task_data
+            console.log(task_data, "saved and replace the last one");
+          }
+        }
+      }
+    }
+
+    this.set(this.data_name, this.datas)
+  }
+
+
 }
-*/
 
 
 
@@ -255,6 +288,7 @@ module.exports.Address_DS = Address
 module.exports.Payment_methods_DS = Payment_methods
 module.exports.Users_DS = Users
 module.exports.Perm_data = Perm_data
+module.exports.Tasks = Tasks
 
 
 /*

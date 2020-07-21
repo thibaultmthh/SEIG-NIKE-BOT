@@ -397,6 +397,7 @@
 
           </div>
           <div class="accounts_bandeau centrer">
+
             <div class="centrer_bouton">
               <button type="button" name="button" class="btn btn-primary btn_add_account" id="myBtn">Add account</button>
             </div>
@@ -413,36 +414,57 @@
             <p>Tasks</p>
           </div>
           <div class="accounts_container container ">
+            <div class="presentation ">
+              <div class="name_div">
+                <p>Name</p>
+              </div>
+              <div class="proxy_div">
+                <p>Date</p>
+              </div>
+              <div class="shipping_div">
+                <p>Region</p>
+              </div>
+              <div class="shipping_div">
+                <p>Satus</p>
+              </div>
+              <div class="other_div">
+                <p>Actions</p>
+              </div>
+            </div>
+
+            <div class="accounts_container container " id="all_tasks_c">
+
+            </div>
           </div>
+
+
+
+
+
+
         </div>
+        <script>
+          window.$ = window.jQuery = require('jquery');
 
+        </script>
+        <script type="text/javascript">
+          const ipc = require('electron').ipcRenderer;
 
+        </script>
+        <script>
+          window.$ = window.jQuery = require('jquery');
 
+        </script>
 
+        <script type="text/javascript" src="js/home/main_home.js"></script>
+        <script type="text/javascript" src="js/billing/add_new_address.js"></script>
+        <script type="text/javascript" src="js/accounts/add_new_acc.js"></script>
+        <script type="text/javascript" src="js/accounts/display_acc.js"></script>
+        <script type="text/javascript" src="js/tasks/tasks.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/avoir.js">
 
-
-      </div>
-      <script>
-        window.$ = window.jQuery = require('jquery');
-
-      </script>
-      <script type="text/javascript">
-        const ipc = require('electron').ipcRenderer;
-
-      </script>
-      <script>
-        window.$ = window.jQuery = require('jquery');
-
-      </script>
-
-      <script type="text/javascript" src="js/home/main_home.js"></script>
-      <script type="text/javascript" src="js/billing/add_new_address.js"></script>
-      <script type="text/javascript" src="js/accounts/add_new_acc.js"></script>
-      <script type="text/javascript" src="js/accounts/display_acc.js"></script>
-      <script type="text/javascript" src="js/main.js"></script>
-      <script type="text/javascript" src="js/avoir.js">
-
-      </script>
+        </script>
 
   </body>
 

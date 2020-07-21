@@ -7,7 +7,7 @@ const ipcMain = require('electron').ipcMain;
 const {get_upcoming} = require("./get_info.js")
 
 const {Perm_data} = require("./data_management.js")
-const {Users_DS, Payment_methods_DS,Address_DS} = require("./data_management.js")
+const {Users_DS, Payment_methods_DS,Address_DS, Tasks} = require("./data_management.js")
 
 const {add_account} = require("./add_account.js")
 
@@ -15,7 +15,7 @@ perm_data = new Perm_data()
 users_ds = new Users_DS()
 payment_methods_ds = new Payment_methods_DS()
 address_ds = new Address_DS()
-
+tasks_ds = new Tasks()
 
 
 
@@ -58,19 +58,6 @@ function mainWin() {
 
 
 console.log(perm_data);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -146,7 +133,9 @@ function main() {
   ipcMain.on("set_user", (event, data)=> {add_account(data, user_ds,payment_methods_ds, address_ds )})
   ipcMain.on("get_all_users", ()=>{mainWindow.webContents.send("all_users", user_ds.datas)})
 
-
+  //task managment
+  ipcMain.on("new_task", (event, data)=>{tasks_ds.add_D(data)})
+  ipcMain.on("get_all_tasks", ()=>{mainWindow.webContents.send("all_tasks", tasks_ds.datas)})
 
 
 

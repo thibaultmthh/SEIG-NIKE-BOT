@@ -60,7 +60,7 @@ ipc.on("upcoming", (event, data) => {
       "        </div>" +
       "      </div>" +
       "      <div class='p-3 centrer'>" +
-      "        <button type='button' name='button ' class='btn btn-primary btn_add_account start_task' id='" + chaussure.pair_id + "'" + btn_state + " data-entry_date='" +chaussure.entry_date+ " '>Create task</button>" +
+      "        <button type='button' name='button ' class='btn btn-primary btn_add_account start_task' id='" + chaussure.pair_id + "'" + btn_state + " data-entry_date='" +chaussure.entry_date+ "' data-pair_name='"+chaussure.name+"'>Create task</button>" +
       "      </div>" +
       "    </div>"
 
@@ -71,8 +71,15 @@ ipc.on("upcoming", (event, data) => {
       pair_id:event.currentTarget.id,
       skuuid:$("#"+event.currentTarget.id+"sizes").val(),
       entry_date:event.currentTarget.getAttribute("data-entry_date"),
-      region: $(".selectRegion").val().toString()
+      region: $(".selectRegion").val().toString(),
+      name:event.currentTarget.getAttribute("data-pair_name"),
+      status: "waiting",
+      phase: 0, //0 rien /1 participé /2 participe fini /3 check results /4 results checked
+      start_timestamp: Date.parse(event.currentTarget.getAttribute("data-entry_date"))+(60*2),
+      check_result_timestamp: Date.parse(event.currentTarget.getAttribute("data-entry_date"))+(60*32),
     }
+    ipc.send("new_task", data)
+    setTimeout(()=>{ipc.send("get_all_tasks")}, 100)
 
     console.log(data);
 
