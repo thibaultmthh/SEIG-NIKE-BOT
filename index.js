@@ -372,7 +372,7 @@ global.profile = {
   'lname': "MATHIAN",
   'fname': "Thibault",
   'email': "titanmath.t@gmail.com",
-  'password': "jslRdl4!"
+  'password': "4ZqRsl4"
 }
 
 global.payment_info = {
